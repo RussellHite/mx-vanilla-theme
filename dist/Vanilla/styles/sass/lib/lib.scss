@@ -23,13 +23,14 @@
 @import "components/images";
 @import "components/labels";
 @import "components/listview";
-@import "components/modals";
 @import "components/navigation";
 @import "components/navigationlist";
 @import "components/tabcontainer";
 @import "components/tables";
 @import "components/templategrids";
 @import "components/mendixsso";
+@import "components/modal";
+@import "components/fonts";
 
 // Page Templates
 @import "pagetemplates/responsive/page-dashboard";
@@ -80,3 +81,6 @@
 @import "layouts/navlayout-content";
 @import "layouts/navlayout-sidebar";
 @import "layouts/navlayout-topbar";
+
+//project
+@import "project/responsive";
