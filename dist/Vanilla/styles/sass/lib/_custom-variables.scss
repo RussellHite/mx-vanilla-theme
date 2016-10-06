@@ -62,7 +62,7 @@ $brand-default:                  $gray-lighter;
 //## These variations are used to support several other variables and components
 
 // Basic Text colors
-$text-dark:                             #000 !default;
+$text-dark:                             #000 ;
 $text-dark-light:                       lighten($text-dark, 40%) !default;
 $text-dark-disabled:                    rgba($text-dark, .26) !default;
 $text-dark-hint:                        rgba($text-dark, .26) !default;

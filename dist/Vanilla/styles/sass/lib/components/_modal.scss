@@ -8,19 +8,19 @@
 		.modal-header {
 			border-radius: 0; // Because of the class .mx-window-active in mxui.css
 			padding: 15px 20px;
-			background-color: $brand-primary;
+			background-color: $brand-default-light;
 			border-bottom-color: $gray-primary;
 			h4 {
 				font-family: $font-primary;
                 font-weight: 600;
-				color: $text-light;
+				color: $text-dark;
 				font-size: 16px;
 				margin: 0;
 			}
 			.close {
 				opacity: 1;
 				filter: alpha(opacity=100); 
-				color: $text-dark;
+				color: #000;
 				text-shadow: none;
 				margin-top: -3px;
 			}
