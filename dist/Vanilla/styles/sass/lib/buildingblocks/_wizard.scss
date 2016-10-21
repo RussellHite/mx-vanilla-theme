@@ -1,22 +1,99 @@
 /* ==========================================================================
-   Products
+   Wizard
 
-   Used in Website page templates
+   Styling for Wizard (Steps/Numbers)
 ========================================================================== */
-.product-header {
-	padding: 25px 0;
-	border-bottom: 1px solid $brand-default;
+.wizard {
+	position: relative;
+	margin: auto;
+	.row:before {
+		left: 0;
+		top: 40px;
+		bottom: 0;
+		position: absolute;
+		content: " ";
+		width: 100%;
+		height: 1px;
+		background-color: #ccc;
+	}
+	.row {
+		position: relative;
+		width: 100%;
+		display: table;
+		margin: auto;
+	}
 }
-.product-content {
-	
+.wizard-progress{
+    border-bottom: 1px solid $brand-default-light;
 }
-.product-title {
-	margin-bottom: 0;
-	margin-top: 0;
+.wizard-steps-container {
+    position: relative;
+    &:before{
+        content: "";
+        border-top: 2px solid $brand-primary;
+        position: absolute;
+        bottom: 0;
+        left: 17%;
+        right: 17%;
+        top: 58px;
+        
+    }
 }
-.product-subtitle {
-	color: $brand-primary-dark;
+.wizard-step, .wizard-progress-step {
+	text-align: center;
+
 }
-.product-btn {
-	margin-top: 10px;
+.wizard-step-number, .wizard-progress-number {
+    text-align: center;
+	font-weight: 600;
+	border-radius: 50%;
+	font-size: 20px;
+	width: 40px;
+	height: 40px;
+	color: $text-light;
+	border: 2px solid $brand-primary;
+	background-color: $brand-primary;
+
+    box-shadow: 0px 0px 0px 5px #FFFFFF;
+
+	// Labels and buttons
+	line-height: 2em;
+	padding: 0;
+    display: inline-block;
+}
+.wizard-step-title, .wizard-progress-title {
+	display: block;
+  	margin-top: 10px;
+    color: $brand-primary;
+}
+
+.wizard-step-active {
+    .wizard-step-number, .wizard-progress-number{
+	   background-color: $brand-success;  
+    }
+    .wizard-step-title, .wizard-progress-title{
+        color: $brand-success;
+    } 
+
+}
+.wizard-step-visited {
+    .wizard-step-number, .wizard-progress-number{
+	background-color: $brand-primary-light;
+    }
+    .wizard-step-title, .wizard-progress-title{
+        color: $brand-primary-light;
+    } 
+}
+
+
+.profile-phone .wizard {
+	.row:before {
+		top: 20px;
+	}
+	.wizard-step-number {
+		width: 40px;
+		height: 40px;
+		line-height: 2em;
+		font-size: 16px;
+	}
 }

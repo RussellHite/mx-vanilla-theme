@@ -8,32 +8,34 @@
 @import "base/base";
 
 // Components
-@import "components/typography";
-@import "components/buttons";
-@import "components/inputs";
 @import "components/alerts";
 @import "components/backgrounds";
-@import "components/grid";
+@import "components/buttons";
 @import "components/datagrids";
 @import "components/dataview";
 @import "components/dijit-widgets";
+@import "components/fonts";
 @import "components/glyphicons";
+@import "components/grid";
 @import "components/groupbox";
 @import "components/helpers";
 @import "components/images";
+@import "components/inputs";
 @import "components/labels";
 @import "components/listview";
+@import "components/mendixsso";
+@import "components/modal";
 @import "components/navigation";
 @import "components/navigationlist";
 @import "components/tabcontainer";
 @import "components/tables";
 @import "components/templategrids";
-@import "components/mendixsso";
-@import "components/modal";
-@import "components/fonts";
+@import "components/typography";
+
+
 
 // Page Templates
-@import "pagetemplates/responsive/page-dashboard";
+/*@import "pagetemplates/responsive/page-dashboard";
 @import "pagetemplates/responsive/page-form";
 @import "pagetemplates/responsive/page-login";
 @import "pagetemplates/responsive/page-masterdetail";
@@ -50,21 +52,7 @@
 @import "pagetemplates/tablet/tablet-page-wizard";
 
 // Building Blocks
-@import "buildingblocks/actionblock";
 @import "buildingblocks/card";
-@import "buildingblocks/dashboardcard";
-@import "buildingblocks/dashboardstat";
-@import "buildingblocks/form";
-@import "buildingblocks/formblock";
-@import "buildingblocks/masterdetail";
-@import "buildingblocks/multilevel";
-@import "buildingblocks/pageheader";
-@import "buildingblocks/sectionheader";
-@import "buildingblocks/profilecard";
-@import "buildingblocks/profileheader";
-@import "buildingblocks/products";
-@import "buildingblocks/sidebarheader";
-@import "buildingblocks/tabsfullwidth";
 @import "buildingblocks/wizard";
 @import "buildingblocks/templategrid/templategrid-profilecard";
 
@@ -75,9 +63,9 @@
 @import "mobile/components/loader";
 @import "mobile/components/mx-header";
 @import "mobile/components/tabcontainer";
-
+*/
 //layouts
-@import "layouts/base";
+@import "layouts/navlayout-base";
 @import "layouts/navlayout-content";
 @import "layouts/navlayout-sidebar";
 @import "layouts/navlayout-topbar";
