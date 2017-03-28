@@ -6,7 +6,7 @@
 .region-topbar {
 	min-height: 60px;
 	border-bottom: 1px solid $brand-primary-light;
-	background-color: $brand-primary-light;
+	background-color: $brand-primary-dark;
 	> .mx-layoutcontainer-wrapper {
 		padding: 0;
 	}
@@ -46,9 +46,7 @@
 			}
 		
 		}
-		@media (max-width: 768px) {
-			display: none;
-		}
+		
 	}
 }
 .region-sidebar,

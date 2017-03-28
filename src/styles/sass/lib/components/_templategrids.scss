@@ -46,6 +46,67 @@
 	}
 }
 
+/* ==========================================================================
+   Templategrid Card
+
+   Default Mendix Templategrid Widget Hover
+========================================================================== */
+.templategrid-card-half.mx-templategrid {
+    .mx-templategrid-content-wrapper {
+		display: block;
+	}
+    .mx-templategrid-row {
+        display: block;
+    }
+	.mx-templategrid-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 48% !important;
+        display: inline-block;
+		
+	}
+    .mx-templategrid-item:nth-child(2n){
+        margin-right: 0;
+    }
+}
+
+
+.templategrid-card-third.mx-templategrid {
+    .mx-templategrid-content-wrapper {
+		display: block;
+	}
+    .mx-templategrid-row {
+        display: block;
+    }
+	.mx-templategrid-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 32% !important;
+        display: inline-block;
+		
+	}
+    .mx-templategrid-item:nth-child(3n){
+        margin-right: 0;
+    }
+}
+.templategrid-card-quart.mx-templategrid {
+    .mx-templategrid-content-wrapper {
+		display: block;
+	}
+    .mx-templategrid-row {
+        display: block;
+    }
+	.mx-templategrid-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 23% !important;
+        display: inline-block;
+		
+	}
+    .mx-templategrid-item:nth-child(4n){
+        margin-right: 0;
+    }
+}
 
 /* ==========================================================================
    Templategrid Selectable

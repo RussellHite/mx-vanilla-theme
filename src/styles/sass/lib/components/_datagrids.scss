@@ -157,6 +157,7 @@
 			}
 			&.selected:hover td {
 				background-color: $brand-info-dark !important;
+                color: $text-light;
 			}
 		}
 	}

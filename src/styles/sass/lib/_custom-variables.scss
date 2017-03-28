@@ -4,9 +4,9 @@
 
 
 //== Step 1: Brand Colors
-$brand-default: 	                    #acacac;
-$brand-primary: 	                    #2980b9;
-$brand-inverse: 	                    #2c3e50;
+$brand-default: 	                    #ECECEC;
+$brand-primary: 	                    #011F5B;
+$brand-inverse: 	                    #FA672B;
 $brand-info: 	                        #3498db;
 $brand-success: 	                    #31AF64;
 $brand-warning: 	                    #f39c12;
@@ -25,13 +25,13 @@ $font-second:                           "open_sans_cond",  Helvetica, Arial, san
 
 
 // Font Header Size
-$font-size-h1: 	                        39px;
-$font-size-h2: 	                        22px;
+$font-size-h1: 	                        36px;
+$font-size-h2: 	                        30px;
 $font-size-h3: 	                        26px;
 $font-size-h4: 	                        19px;
 $font-size-h5:                          14px;
 $font-size-h6:                          11px;
-$font-average:                          14px;
+$font-average:                          12px;
 
 // Line Height
 $line-height-base:                      1.428571429;
@@ -50,13 +50,6 @@ $gray-lighter:                          #eee;
 
 
 
-
-//== Global Border Color
-// The default border color used by Datagrid, Listview, Tables, Dataview, Modals and more
-$brand-default:                  $gray-lighter;
-
-
-//
 
 //== Color variations
 //## These variations are used to support several other variables and components
@@ -84,9 +77,9 @@ $brand-inverse-light:                   lighten($brand-inverse,40) !default;
 $brand-inverse-lighter:                 lighten($brand-inverse,80) !default;    
 
 $brand-primary-darker:                  darken($brand-primary,40) !default;    
-$brand-primary-dark:                    darken($brand-primary,26) !default;    
-$brand-primary-light:                   lighten($brand-primary,40) !default;    
-$brand-primary-lighter:                 lighten($brand-primary,80) !default;    
+$brand-primary-dark:                    #223863 !default;    
+$brand-primary-light:                   #447CEC !default;    
+$brand-primary-lighter:                 #EAF1FF !default;    
 
 $brand-info-darker:                     darken($brand-info,40) !default;    
 $brand-info-dark:                       darken($brand-info,26) !default;    

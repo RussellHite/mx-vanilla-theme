@@ -2,11 +2,12 @@
    Card
 ========================================================================== */
 .card {
-	padding: 20px;
+	padding: 10px;
 	margin: 0 0 30px 0;
-	border: 1px solid $brand-default-dark;
+	border: 1px solid $brand-default-light;
 	background-color: #FFF;
 	border-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
 	@media only screen and (max-width: 1024px) {
 		padding: 10px;
