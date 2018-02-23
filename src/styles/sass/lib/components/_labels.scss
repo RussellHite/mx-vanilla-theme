@@ -3,11 +3,13 @@
 
    Default labels combined with Bootstrap labels
 ========================================================================== */
+
 .label {
-	font-family: $font-primary;
+    font-family: $font-primary;
     font-weight: 600; 
 	border-radius: .25em;
 	display: inline;
+    display: inline-block;
 	padding: .2em .6em .3em !important;
 	color: #fff;
 	vertical-align: baseline;
@@ -16,6 +18,11 @@
 	font-size: 100%;
 	line-height: 1;
 }
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+// Color variations
 .label-default { 
 	background-color: $brand-default-light; 
 	color: $brand-default;
