@@ -1,74 +1,84 @@
+//
+// Atlas-UI-Framework v1.0.0 (https://atlas.mendix.com/)
+// Copyright (c) 2017 Mendix
+// Licensed under MIT (https://github.com/mendix/Atlas-UI-Framework/blob/master/LICENSE)
+//
 
-@import "custom-variables";
+@import "../custom/custom-variables";
+
+@import "variables";
 
 // Base
-//@import "base/variables";
-@import "base/mixins";
+@import "base/animation";
 @import "base/reset";
 @import "base/base";
 
+// Mixins
+@import "mixins/animations";
+@import "mixins/spacing";
+@import "mixins/layout-spacing";
+@import "mixins/buttons";
+@import "mixins/groupbox";
+
 // Components
+@import "components/inputs";
 @import "components/alerts";
 @import "components/backgrounds";
 @import "components/buttons";
+@import "components/grid";
 @import "components/datagrids";
 @import "components/dataview";
+@import "components/header";
 @import "components/dijit-widgets";
-@import "components/fonts";
 @import "components/glyphicons";
-@import "components/grid";
 @import "components/groupbox";
 @import "components/helpers";
 @import "components/images";
-@import "components/inputs";
 @import "components/labels";
 @import "components/listview";
-@import "components/mendixsso";
-@import "components/modal";
-@import "components/navigation";
+@import "components/modals";
+@import "components/navigationbar";
 @import "components/navigationlist";
+@import "components/navigationtree";
+@import "components/simplemenubar";
 @import "components/tabcontainer";
 @import "components/tables";
 @import "components/templategrids";
 @import "components/typography";
+@import "components/layoutgrid";
+@import "components/progress";
+@import "components/hover";
+@import "components/fade-in";
+@import "components/animate";
 
-
-
-// Page Templates
-/*@import "pagetemplates/responsive/page-dashboard";
-@import "pagetemplates/responsive/page-form";
-@import "pagetemplates/responsive/page-login";
-@import "pagetemplates/responsive/page-masterdetail";
-@import "pagetemplates/responsive/page-tabs";
-@import "pagetemplates/responsive/page-website";
-@import "pagetemplates/responsive/page-wizard";
-@import "pagetemplates/phone/phone-page-dashboard";
-@import "pagetemplates/phone/phone-page-form";
-@import "pagetemplates/phone/phone-page-listview";
-@import "pagetemplates/phone/phone-page-wizard";
-@import "pagetemplates/tablet/tablet-page-dashboard";
-@import "pagetemplates/tablet/tablet-page-form";
-@import "pagetemplates/tablet/tablet-page-masterdetail";
-@import "pagetemplates/tablet/tablet-page-wizard";
-*/
 // Building Blocks
+@import "buildingblocks/alignment-block";
+@import "buildingblocks/breadcrumb";
 @import "buildingblocks/card";
+@import "buildingblocks/controlgroup";
+@import "buildingblocks/pageblocks";
+@import "buildingblocks/pageheader";
+@import "buildingblocks/heroheader";
+@import "buildingblocks/formblock";
+@import "buildingblocks/list";
+@import "buildingblocks/master-detail";
+@import "buildingblocks/userprofile";
 @import "buildingblocks/wizard";
-@import "buildingblocks/templategrid/templategrid-profilecard";
-/*
-// Mobile
-@import "mobile/layouts/base";
+@import "buildingblocks/timeline";
 
-@import "mobile/components/listview";
-@import "mobile/components/loader";
-@import "mobile/components/mx-header";
-@import "mobile/components/tabcontainer";
-*/
+//helpers
+@import "helpers/sass-flexbox";
+
 //layouts
-@import "layouts/navlayout-base";
-@import "layouts/navlayout-content";
-@import "layouts/navlayout-sidebar";
-@import "layouts/navlayout-topbar";
+@import "layouts/layout-atlas";
+@import "layouts/layout-atlas-phone";
+@import "layouts/layout-atlas-responsive";
+@import "layouts/layout-atlas-tablet";
 
-//project
-@import "project/responsive";
+//customwidgets
+@import "customwidgets/progress-bar-theme";
+@import "customwidgets/progress-circle-theme";
+@import "customwidgets/range-slider-theme";
+@import "customwidgets/slider-theme";
+@import "customwidgets/star-rating-theme";
+@import "customwidgets/switchwidget";
