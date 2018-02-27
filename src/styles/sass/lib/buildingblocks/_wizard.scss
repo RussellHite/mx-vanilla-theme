@@ -1,99 +1,137 @@
-/* ==========================================================================
-   Wizard
+$wizard-step-number-size: 60px;
+$wizard-step-height: 50px;
 
-   Styling for Wizard (Steps/Numbers)
-========================================================================== */
 .wizard {
-	position: relative;
-	margin: auto;
-	.row:before {
-		left: 0;
-		top: 40px;
-		bottom: 0;
-		position: absolute;
-		content: " ";
-		width: 100%;
-		height: 1px;
-		background-color: #ccc;
-	}
-	.row {
-		position: relative;
-		width: 100%;
-		display: table;
-		margin: auto;
-	}
-}
-.wizard-progress{
-    border-bottom: 1px solid $brand-default-light;
-}
-.wizard-steps-container {
-    position: relative;
-    &:before{
-        content: "";
-        border-top: 2px solid $brand-primary;
-        position: absolute;
-        bottom: 0;
-        left: 17%;
-        right: 17%;
-        top: 58px;
-        
+    display: flex;
+    justify-content: space-between;
+    .wizard-step {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        &::before {
+            position: absolute;
+            z-index: -1;
+            top: $wizard-step-number-size / 2;
+            display: block;
+            width: 100%;
+            height: 2px;
+            content: "";
+            background-color: $gray-primary;
+        }
+        .wizard-step-number {
+            width: $wizard-step-number-size;
+            height: $wizard-step-number-size;
+            border-color: $gray-primary;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            font-size: 20px;
+        }
+        .wizard-step-text {
+            display: block;
+            margin-top: 15px;
+        }
+    }
+
+
+    // States
+    .wizard-step-active {
+        .wizard-step-number {
+            color: #FFFFFF;
+            border-color: $brand-primary;
+            background-color: $brand-primary;
+        }
+        .wizard-step-text {
+            color: $brand-primary;
+        }
+    }
+    .wizard-step-visited {
+        .wizard-step-number {
+            color: #FFFFFF;
+            border-color: $brand-success;
+            background-color: $brand-success;
+        }
+        .wizard-step-text {
+        }
     }
 }
-.wizard-step, .wizard-progress-step {
-	text-align: center;
 
-}
-.wizard-step-number, .wizard-progress-number {
-    text-align: center;
-	font-weight: 600;
-	border-radius: 50%;
-	font-size: 20px;
-	width: 40px;
-	height: 40px;
-	color: $text-light;
-	border: 2px solid $brand-primary;
-	background-color: $brand-primary;
+.wizardprogress {
+    display: flex;
+    justify-content: space-between;
 
-    box-shadow: 0px 0px 0px 5px #FFFFFF;
-
-	// Labels and buttons
-	line-height: 2em;
-	padding: 0;
-    display: inline-block;
-}
-.wizard-step-title, .wizard-progress-title {
-	display: block;
-  	margin-top: 10px;
-    color: $brand-primary;
-}
-
-.wizard-step-active {
-    .wizard-step-number, .wizard-progress-number{
-	   background-color: $brand-success;  
+    .wizard-step-text {
+        width: 100%;
     }
-    .wizard-step-title, .wizard-progress-title{
-        color: $brand-success;
-    } 
 
-}
-.wizard-step-visited {
-    .wizard-step-number, .wizard-progress-number{
-	background-color: $brand-primary-light;
+    .wizard-step {
+        position: relative;
+        width: 100%;
+        height: $wizard-step-height;
+        margin-left: 0 - ($wizard-step-height / 2);
+        padding-left: ($wizard-step-height / 2);
+        border: 1px solid $gray-primary;
+        background: #FFFFFF;
+
+        a {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            padding: 14px;
+            white-space: nowrap;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            color: $font-color-default;
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: 1;
+            left: 100%;
+            margin-left: 0 - ($wizard-step-height / 2);
+            content: " ";
+            border-style: solid;
+            border-color: transparent;
+        }
+        &::after {
+            top: 1px;
+            border-width: (($wizard-step-height / 2) - 1);
+            border-left-color: #FFFFFF;
+        }
+        &::before {
+            top: 0;
+            border-width: $wizard-step-height / 2;
+            border-left-color: $gray-primary;
+        }
+
+        &:first-child {
+            margin-left: 0;
+            padding-left: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
     }
-    .wizard-step-title, .wizard-progress-title{
-        color: $brand-primary-light;
-    } 
-}
-
-
-.profile-phone .wizard {
-	.row:before {
-		top: 20px;
-	}
-	.wizard-step-number {
-		width: 40px;
-		height: 40px;
-		line-height: 2em;
-		font-size: 16px;
-	}
+    // States
+    .wizard-step-active {
+        background: $brand-primary;
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        &::after {
+            border-left-color: $brand-primary;
+        }
+    }
+    .wizard-step-visited {
+        a {
+            color: $link-color;
+        }
+    }
 }

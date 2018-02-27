@@ -1,8 +1,11 @@
 /* ==========================================================================
    Inputs
+
+   The form-control class style all inputs
 ========================================================================== */
+
 .form-control {
-	-moz-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -moz-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -16,17 +19,27 @@
 	border-radius: 3px;
 	background-color: $brand-default-lighter;
 	background-image: none;
-	color: $text-dark;
+	color: $gray-dark;
 	font-size: 12px;
 	line-height: $line-height-base;
+    
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    @if $form-input-style==lined {
+        @extend .form-control-lined;
+    }
 }
+
 .form-control:focus {
-	border-color: $brand-info;
+    border-color: $brand-info;
 	background-color: $brand-info-lighter;
-	outline: 0;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
+
 textarea.form-control {
-	height: auto;
+    height: auto;
 }
 
 .form-control-static {
@@ -43,87 +56,94 @@ textarea.form-control {
 	height: auto;
 }
 
-
-
-/* ==========================================================================
-   Group with label and input
-========================================================================== */
-/* Input and textarea get properly aligned */
-.form-group div[class*='textBox'] > label,
-.form-group div[class*='textArea'] > label,
-.form-group div[class*='datePicker'] > label {
-	@extend .form-control-static;
-}
-.form-group {
-	margin-bottom: 10px;
-	[class*='col-'] {
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-}
-.form-group .control-label {
-	color: $text-dark;	
-	font-size: 12px;
-	font-weight: 600;	
-}
-.form-horizontal {
-	@media (min-width: $screen-sm){
-		.control-label {
-			line-height: $line-height-base;
-			padding-top: 8px;
-			padding-bottom: 8px;
-		}
-	}
+select.form-control {
+    $arrow: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15px' height='8px'><polyline id='Line' fill='none' stroke='%23555555' points='0.5 0.5 6 6 11.545361 0.5'></polyline></svg>";
+    padding-right: 30px;
+    background-image: url($arrow);
+    background-repeat: no-repeat;
+    background-position: calc(100% - #10px) center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
-/* ==========================================================================
-   Inputs Readonly
-========================================================================== */
-// Deprecated (should not be needed anymore with new form groups)
+// Lined
+.form-control-lined {
+    border: 0;
+    border-bottom: 1px solid $gray-primary;
+    border-radius: 0;
+    background-color: transparent;
+    &:focus {
+        background-color: transparent;
+    }
+}
 
-// .readonly-input {
-// 	@extend .form-control;
-// 	height: auto;
-// 	min-height: 33px;
-// 	background-color: $form-input-bg-disabled !important;
-// 	label { 
-// 		padding: 0 !important;
-// 	}
-// 	textarea {
-// 		display: none;
-// 	}
-// }
-// .readonly-input-alert label {
-// 	color: $brand-danger;
-// }
-// /* Needed for IE8, IE8 doesn't respect border-box and min-height */
-// .dj_ie8 .readonly-input {
-// 	min-height: auto;
-// }
+// Read only fom control class
+.form-control-static {
+    overflow: hidden;
+    min-height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    border-bottom: 1px solid #F0F0EE;
+    font-size: 14px;
+    line-height: $form-input-line-height;
+}
 
+// Not editable textarea, textarea will be rendered as a label
+.mx-textarea label {
+    height: auto;
+}
 
-
-/* ==========================================================================
-   Inputs File Upload
-========================================================================== */
+// File input widget
 .mx-fileinput {
-	.mx-wrapped-label {
-		display: inline-block;
-		width: 200px;
-	}
-	/* File input widget hover fix */
-	.mx-wrapped-form {
-		.mx-wrapped-input {
-			cursor: pointer;
-		}
-		.mx-fileinput-upload-button:hover {
-			background-color: $brand-default-dark;
-		}
-	}
+    .mx-wrapped-label {
+        display: inline-block;
+        width: 200px;
+    }
+    /* File input widget hover fix */
+    .mx-wrapped-form {
+        .mx-wrapped-input {
+            cursor: pointer;
+        }
+        .mx-fileinput-upload-button:hover {
+            background-color: $brand-default;
+        }
+    }
 }
-/* ==========================================================================
-   Inputs Radio
-========================================================================== */
+
+// Form Group
+.form-group {
+    margin-bottom: 15px;
+    & > [class*="col-"] {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    // Alignment content
+    div[class*="textBox"] > label,
+    div[class*="textArea"] > label,
+    div[class*="datePicker"] > label {
+        @extend .form-control-static;
+    }
+    // Label
+    .control-label {
+        color: #666;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+// Orientation
+.form-horizontal {
+    @media (min-width: $screen-sm) {
+        .control-label {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            line-height: $form-input-line-height;
+        }
+    }
+}
+
+// Radio Inputs
 
 .radio {
     label{
@@ -173,10 +193,7 @@ textarea.form-control {
     left: 19px;
 }
 
-/* ==========================================================================
-   Responsive Inputs Radio Buttons
-========================================================================== */
-    
+// Responsive Inputs Radio Buttons
 
 .RadioButtonList .form-group {
     //padding-left: 25px;
@@ -287,9 +304,7 @@ textarea.form-control {
     }
 }
 
-/* ==========================================================================
-   Inputs Check Box
-========================================================================== */
+// Inputs Check Box
 .form-group[class*="mx-name-checkBox"]{
     margin-bottom: 3px;
     label.control-label{
@@ -344,13 +359,13 @@ textarea.form-control {
     .mx-dateinput-select-button, .mx-referencesetselector-select-button {
             position: absolute;
             background-color: transparent;
-            color: $text-dark;
+            color: $gray-dark;
             right: 0;
             top: 5px;
             outline: 0;
             border: none;
             &:hover, &:focus {
-            color: gray;
+            color: $gray;
             outline: 0 !important;
         }
     }
