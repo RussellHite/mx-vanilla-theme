@@ -5,7 +5,7 @@
 ========================================================================== */
 
 th {
-    font-weight: 600;
+    font-weight: $gray-light;
 }
 
 html body .mx-page table.mx-table {
@@ -23,10 +23,11 @@ table.mx-table {
         > tr {
             /* Table header */
             > th {
-                padding: 8px;s
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;s
                 * {
-                    color: #666;
-                    font-weight: 600;
+                    color:  $gray;
+                    font-weight: $gray-light;
+                    font-weight: 500;
                 }
                 > label {
                     padding-top: 7px;
@@ -35,7 +36,7 @@ table.mx-table {
             }
             /* Table cells */
             > td {
-                padding:8px;
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
                 > div > label,
                 .mx-referenceselector-input-wrapper label {
                     padding-top: 7px;
@@ -52,7 +53,7 @@ table.mx-table {
         > tr {
             > th,
             > td {
-                padding:8px;
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
             }
         }
     }
@@ -64,7 +65,7 @@ table.mx-table {
         > tr {
             > th,
             > td {
-                padding: 8px;
+                padding: $padding-table-cell-top $padding-table-cell-right $padding-table-cell-bottom $padding-table-cell-left;
             }
         }
     }
@@ -83,7 +84,7 @@ table.table-lined.mx-table {
             > td {
                 border-width: 1px 0;
                 border-style: solid;
-                border-color: $gray-primary;
+                border-color: $gray-primary ;
             }
         }
     }
@@ -100,7 +101,7 @@ table.table-bordered.mx-table {
             > td {
                 border-width: 1px;
                 border-style: solid;
-                border-color: $gray-primary;
+                border-color: $gray-primary ;
             }
         }
     }

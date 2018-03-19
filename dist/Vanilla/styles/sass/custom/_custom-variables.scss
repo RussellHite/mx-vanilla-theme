@@ -20,41 +20,41 @@ $brand-danger:                                      #ED1C24;
 $default-border-color:                              $gray-primary;
 
 //== Step 3: Typography
-// $font-family-import:                                "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
+$font-family-import:                                "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
 $font-family-base:                                  "Open Sans", sans-serif;
 $font-base-size:                                    14px;
-$font-base-color:                                   $gray;
-$link-color:                                        $brand-primary;
+$font-base-color:                                   #555555;
+$brand-info:                                        $brand-primary;
 $font-size-h1:                                      31px;
 $font-size-h2:                                      26px;
 $font-size-h3:                                      24px;
 $font-size-h4:                                      18px;
-$font-color-headers:                                #17347B;
+$brand-primary-darks:                                #17347B;
 
 //== Step 2: UI Customization
 
 // Topbar
-$topbar-bg:                                         #FFFFFF;
-$navtopbar-border-color:                            $gray-primary;
-$topbar-border-color:                               $gray-primary;
-$topbar-minimalheight:                              60px;
-$navtopbar-color:                                   $gray;
-$navbar-brand-name:                                 $gray-primary;
+$text-light:                                         #FFFFFF;
+ $brand-info:                            $default-border-color;
+$topbar-border-color:                                $brand-info;
+$topbar-minheight:                              60px;
+ $gray:                                   $font-base-color;
+$gray:                                 $default-border-color;
 $brand-logo:                                        false;
 $brand-logo-height:                                 30px;
 $brand-logo-width:                                  30px;
 
 // Sidebar
-$sidebar-bg:                                        $brand-inverse;
-$navsidebar-color:                                  #FFFFFF;
-$navsidebar-color:                                  #FFFFFF;
+$brand-inverse:                                        $brand-inverse;
+$text-light:                                  #FFFFFF;
+$text-light:                            $text-light;
 
 // Backgrounds
-$bg-color:                                          #FFFFFF;
-$bg-color-secondary:                                #F5F8FD;
+$text-light:                                          #FFFFFF;
+$brand-default-lighter:                                #F5F8FD;
 
 // == Old variables used in theme customizer to the new lib variables
 $font-size-default:                                 $font-base-size;
-$font-color-default:                                $font-base-color;
-$gray-primary:                                      $default-border-color;
-$font-color-header:				                    $font-color-headers;
+$gray:                                $font-base-color;
+$gray-primary:                              $default-border-color;
+$brand-primary-dark:				                    $brand-primary-darks;

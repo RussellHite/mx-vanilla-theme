@@ -8,7 +8,7 @@
     flex: 1;
     flex-direction: row;
     .flexitem {
-        margin-right: 15px;
+        margin-right: $gutter-size;
         &:last-child {
             margin-right: 0;
         }

@@ -17,7 +17,7 @@
     display: inline-block;
     margin: 0;
     &:last-child {
-        color: $font-base-color;
+        color: $gray;
         a {
             text-decoration: none;
         }
@@ -39,6 +39,6 @@
     font-size: $font-size-h3;
 }
 .breadcrumb-underline {
-    padding-bottom: 15px;
+    padding-bottom: $gutter-size;
     border-bottom: 1px solid $gray-primary;
 }

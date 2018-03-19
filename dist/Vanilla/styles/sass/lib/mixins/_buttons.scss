@@ -32,7 +32,7 @@
     // Button bordered
     &.btn-bordered {
         background-color: transparent;
-        @if $color != $btn-default-color {
+        @if $color !=  $brand-primary {
             color: $border;
         }
         &:hover,
@@ -50,12 +50,12 @@
         text-decoration: none;
         border-color: transparent;
         background-color: transparent;
-        @if $color != $btn-default-color {
+        @if $color !=  $brand-primary {
             color: $background;
         }
         &:hover {
-            border-color: $btn-link-bg-hover;
-            background-color: $btn-link-bg-hover;
+            border-color:  $gray-lighter;
+            background-color:  $gray-lighter;
         }
     }
 }

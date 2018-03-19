@@ -5,45 +5,49 @@
 ========================================================================== */
 
 .label {
-    font-family: $font-primary;
-    font-weight: 600; 
-	border-radius: .25em;
-	display: inline;
+    display: inline;
     display: inline-block;
-	padding: .2em .6em .3em !important;
-	color: #fff;
-	vertical-align: baseline;
-	text-align: center;
-	white-space: nowrap; 
-	font-size: 100%;
-	line-height: 1;
+    padding: 0.2em 0.6em 0.3em;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+    color: #FFFFFF;
+    border-radius: 0.25em;
+    font-size: 100%;
+    font-weight: $gray-light;
+    line-height: 1;
 }
 
 //== Design Properties
 //## Helper classes to change the look and feel of the component
 //-------------------------------------------------------------------------------------------------------------------//
 // Color variations
-.label-default { 
-	background-color: $brand-default-light; 
-	color: $brand-default;
+.label-default {
+    color:  $gray;
+    background-color: $brand-primary;
 }
-.label-primary { 
-	background-color: $brand-primary-light; 
-	color: $brand-primary;
+
+.label-primary {
+    color: $text-light;
+    background-color:  $brand-primary;
 }
-.label-success { 
-	background-color: $brand-success-light; 
-	color: $brand-success;
+
+.label-success {
+    color: $text-light;
+    background-color: $brand-success;
 }
-.label-info { 
-	background-color: $brand-info-light; 
-	color: $brand-info;
+
+.label-info {
+    color: $text-light;
+    background-color: $brand-info;
 }
-.label-warning { 
-	background-color: $brand-warning-light; 
-	color: $brand-warning;
+
+.label-warning {
+    color: $text-light;
+    background-color: $brand-warning;
 }
-.label-danger { 
-	background-color: $brand-danger-light; 
-	color: $brand-danger;
+
+.label-danger {
+    color: $text-light;
+    background-color: $brand-danger;
 }

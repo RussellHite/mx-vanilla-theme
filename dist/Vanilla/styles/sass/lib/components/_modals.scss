@@ -6,48 +6,44 @@
 
 .modal-dialog {
     .modal-content {
-		border-radius: 4px;
-		box-shadow:	0 2px 4px rgba(0,0,0,.2);
-		border: none;
-
-		.modal-header {
-			border-radius: 0; // Because of the class .mx-window-active in mxui.css
-			padding: 15px 20px;
-			background-color: $brand-default-light;
-			border-bottom-color: $gray-primary;
-			h4 {
-				font-family: $font-primary;
-                font-weight: 600;
-				color: $gray-dark;
-				font-size: 16px;
-				margin: 0;
-			}
-			.close {
-				opacity: 1;
-				filter: alpha(opacity=100); 
-				color: #000;
-				text-shadow: none;
-				margin-top: -3px;
-			}
-		}
-		.m
+        border: 1px solid $gray-primary ;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        .modal-header {
+            padding: 15px 20px;
+            border-bottom-color: $gray-primary ;
+            border-radius: 0; // Because of the class .mx-window-active in mxui.css
+            background-color: transparent;
+            h4 {
+                margin: 0;
+                color:  $gray;
+                font-size: 16px;
+                font-weight: $gray-light;
+            }
+            .close {
+                margin-top: -3px;
+                opacity: 1;
+                /* For IE8 and earlier */
+                color:  $gray;
+                text-shadow: none;
+                filter: alpha(opacity=100);
+            }
+        }
         .modal-body {
             padding: 20px;
         }
         .modal-footer {
             display: flex;
             justify-content: flex-end;
+            margin-top: 0;
             padding: 20px;
-			margin-top: 0;
-			border-style: none;
-			text-align: left;
+            border-style: none;
         }
     }
 }
 
 // Default Mendix Window Modal
 .mx-window {
-    width: 800px;
     // If popup direct child is a dataview it gets the class mx-window-view
     &.mx-window-view .mx-window-body {
         padding: 0;
@@ -63,7 +59,7 @@
             margin: 0;
             padding: 20px;
             text-align: left;
-            border-top: 1px solid $gray-primary;
+            border-top: 1px solid $gray-primary ;
         }
     }
     .mx-dataview-controls {
@@ -101,8 +97,8 @@
         font-size: 16px;
     }
     h4 {
-        color: #AAAAAA;
+        color: $gray-light;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: $gray-light;
     }
 }

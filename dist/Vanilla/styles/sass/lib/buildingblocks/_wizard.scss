@@ -81,7 +81,7 @@ $wizard-step-height: 50px;
             white-space: nowrap;
             text-decoration: none;
             text-overflow: ellipsis;
-            color: $font-color-default;
+            color: $gray;
         }
         &::before,
         &::after {
@@ -131,7 +131,7 @@ $wizard-step-height: 50px;
     }
     .wizard-step-visited {
         a {
-            color: $link-color;
+            color: $brand-info;
         }
     }
 }

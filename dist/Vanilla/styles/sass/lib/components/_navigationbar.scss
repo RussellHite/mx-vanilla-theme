@@ -15,33 +15,33 @@
         & > li.mx-navbar-item > a {
             display: flex;
             align-items: center;
-            min-height: 60px;
-            padding: 5px 15px;
+            min-height: $topbar-minheight;
+            padding: $navigation-item-padding;
             vertical-align: middle;
-            color: #fff;
+            color: $text-light;
             border-radius: 0;
-            font-size: 14px;
-            font-weight: normal;
+            font-size: $font-size-default;
+            font-weight: 400;
 
             /* Dropdown arrow */
             .caret {
-                border-top-color: #fff;
-                border-bottom-color: #fff;
+                border-top-color: $text-light;
+                border-bottom-color: $text-light;
             }
             &:hover,
             &:focus,
             &.active {
                 text-decoration: none;
-                color: #fff;
-                background-color: $navigation-bg-hover;
+                color: $brand-default-dark;
+                background-color: $brand-inverse-light;
                 .caret {
-                    border-top-color: #fff;
-                    border-bottom-color: #fff;
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
                 }
             }
             &.active {
-                color: #fff;
-                background-color: $navigation-bg-active;
+                color: $text-light;
+                background-color: $brand-inverse-light;
             }
 
             /* Dropdown */
@@ -56,7 +56,7 @@
                 transform: rotate(360deg);
                 border-width: 0 9px 9px 9px;
                 border-style: solid;
-                border-color: transparent transparent $navigation-border-color transparent;
+                border-color: transparent transparent $brand-inverse-light transparent;
             }
 
             // Image
@@ -69,7 +69,7 @@
                 top: 0;
                 margin-right: 0.5em;
                 vertical-align: middle;
-                font-size: 20px;
+                font-size: $font-size-h4;
             }
         }
 
@@ -81,19 +81,19 @@
         & > .mx-navbar-item.open > a:hover,
         & > .mx-navbar-item.open > a:focus {
             text-decoration: none;
-            color: #fff;
-            background-color: $navigation-bg-hover;
+            color: $brand-default-dark;
+            background-color: $brand-inverse-light;
             .caret {
-                border-top-color: #fff;
-                border-bottom-color: #fff;
+                border-top-color: $brand-default-dark;
+                border-bottom-color: $brand-default-dark;
             }
         }
         & > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
-            color: $navigation-sub-color-active;
-            background-color: $navigation-sub-bg-active;
+            color:  $brand-primary;
+            background-color: $brand-inverse;
             .caret {
-                border-top-color: $navigation-sub-color-active;
-                border-bottom-color: $navigation-sub-color-active;
+                border-top-color:  $brand-primary;
+                border-bottom-color:  $brand-primary;
             }
         }
     }
@@ -104,21 +104,21 @@
         .mx-navbar-item.open .dropdown-menu {
             padding: 0;
             border-radius: 0;
-            background-color: $navigation-sub-bg;
+            background-color: $brand-inverse;
             & > li.mx-navbar-subitem > a {
                 padding: 10px 20px;
-                color: $navigation-sub-color;
+                color: $gray-light;
                 border-radius: 0;
-                font-size: $navigation-sub-font-size;
-                font-weight: normal;
+                font-size: $font-size-small;
+                font-weight: 400;
                 &:hover,
                 &:focus {
-                    color: $navigation-sub-color-hover;
-                    background-color: $navigation-sub-bg-hover;
+                    color:  $brand-primary;
+                    background-color: $brand-inverse;
                 }
                 &.active {
-                    color: $navigation-sub-color-active;
-                    background-color: $navigation-sub-bg-active;
+                    color:  $brand-primary;
+                    background-color: $brand-inverse;
                 }
             }
         }
@@ -136,36 +136,36 @@
 // When used in topbar
 .region-topbar {
     .mx-navbar {
-        background-color: #fff;
+        background-color: $text-light;
         ul.nav {
             /* Navigation item */
             & > li.mx-navbar-item > a {
-                color: $gray;
-                font-size: 14px;
+                color:  $gray;
+                font-size: $font-size-default;
 
                 /* Dropdown arrow */
                 .caret {
-                    border-top-color: $gray;
-                    border-bottom-color: $gray;
+                    border-top-color:  $gray;
+                    border-bottom-color:  $gray;
                 }
                 &:hover,
                 &:focus,
                 &.active {
-                    color: $gray;
-                    background-color: $navtopbar-bg-hover;
+                    color:  $gray;
+                    background-color: $text-light;
                     .caret {
-                        border-top-color: $navtopbar-color-active;
-                        border-bottom-color: $navtopbar-color-active;
+                        border-top-color:  $gray;
+                        border-bottom-color:  $gray;
                     }
                 }
                 &.active {
-                    color: $navtopbar-color-active;
-                    background-color: $navtopbar-bg-active;
+                    color:  $gray;
+                    background-color: $text-light;
                 }
 
                 /* Dropdown */
                 .mx-navbar-submenu::before {
-                    border-color: transparent transparent $gray-primary transparent;
+                    border-color: transparent transparent  $brand-info transparent;
                 }
 
                 // Image
@@ -181,19 +181,19 @@
             & > .mx-navbar-item.open > a,
             & > .mx-navbar-item.open > a:hover,
             & > .mx-navbar-item.open > a:focus {
-                color: $gray;
-                background-color: $navtopbar-bg-hover;
+                color:  $gray;
+                background-color: $text-light;
                 .caret {
-                    border-top-color: $gray;
-                    border-bottom-color: $gray;
+                    border-top-color:  $gray;
+                    border-bottom-color:  $gray;
                 }
             }
             & > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
-                color: $navtopbar-sub-color-active;
-                background-color: $navtopbar-sub-bg-active;
+                color: $text-light;
+                background-color: $text-light;
                 .caret {
-                    border-top-color: $navtopbar-sub-color-active;
-                    border-bottom-color: $navtopbar-sub-color-active;
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
                 }
             }
         }
@@ -201,18 +201,18 @@
             ul.nav > li.mx-navbar-item > a {
             }
             .mx-navbar-item.open .dropdown-menu {
-                background-color: $navtopbar-sub-bg;
+                background-color: $text-light;
                 & > li.mx-navbar-subitem > a {
-                    color: $navtopbar-sub-color;
-                    font-size: $navtopbar-sub-font-size;
+                    color:  $gray-light;
+                    font-size: $font-size-small;
                     &:hover,
                     &:focus {
-                        color: $navtopbar-sub-color-hover;
-                        background-color: $navtopbar-sub-bg-hover;
+                        color:  $brand-primary;
+                        background-color: $text-light;
                     }
                     &.active {
-                        color: $navtopbar-sub-color-active;
-                        background-color: $navtopbar-sub-bg-active;
+                        color: $text-light;
+                        background-color: $text-light;
                     }
                 }
             }
@@ -223,41 +223,41 @@
 // When used in sidebar
 .region-sidebar {
     .mx-navbar {
-        background-color: $navsidebar-bg;
+        background-color: $brand-inverse;
         ul.nav {
             /* Navigation item */
             & > li.mx-navbar-item > a {
-                color: #fff;
-                font-size: 14px;
+                color: $text-light;
+                font-size: $font-size-default;
 
                 /* Dropdown arrow */
                 .caret {
-                    border-top-color: #fff;
-                    border-bottom-color: #fff;
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
                 }
                 &:hover,
                 &:focus,
                 &.active {
-                    color: #fff;
-                    background-color: $navsidebar-bg-hover;
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
                     .caret {
-                        border-top-color: #fff;
-                        border-bottom-color: #fff;
+                        border-top-color: $text-light;
+                        border-bottom-color: $text-light;
                     }
                 }
                 &.active {
-                    color: #fff;
-                    background-color: $navsidebar-bg-active;
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
                 }
 
                 /* Dropdown */
                 .mx-navbar-submenu::before {
-                    border-color: transparent transparent $navsidebar-border-color transparent;
+                    border-color: transparent transparent  $brand-inverse-light transparent;
                 }
 
                 // Image
                 .glyphicon {
-                    font-size: 20px;
+                    font-size: 1.3em;
                 }
             }
 
@@ -268,19 +268,19 @@
             & > .mx-navbar-item.open > a,
             & > .mx-navbar-item.open > a:hover,
             & > .mx-navbar-item.open > a:focus {
-                color: #fff;
-                background-color: $navsidebar-bg-hover;
+                color: $text-light;
+                background-color: $brand-inverse-light;
                 .caret {
-                    border-top-color: #fff;
-                    border-bottom-color: #fff;
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
                 }
             }
             & > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
-                color: $navsidebar-sub-color-active;
-                background-color: $navsidebar-sub-bg-active;
+                color:  $brand-primary;
+                background-color: $brand-inverse;
                 .caret {
-                    border-top-color: $navsidebar-sub-color-active;
-                    border-bottom-color: $navsidebar-sub-color-active;
+                    border-top-color:  $brand-primary;
+                    border-bottom-color:  $brand-primary;
                 }
             }
         }
@@ -288,18 +288,18 @@
             ul.nav > li.mx-navbar-item > a {
             }
             .mx-navbar-item.open .dropdown-menu {
-                background-color: $navtopbar-sub-bg;
+                background-color: $text-light;
                 & > li.mx-navbar-subitem > a {
-                    color: $navsidebar-sub-color;
-                    font-size: $navsidebar-sub-font-size;
+                    color:  $brand-primary;
+                    font-size:  $font-size-small;
                     &:hover,
                     &:focus {
-                        color: $navsidebar-sub-color-hover;
-                        background-color: $navsidebar-sub-bg-hover;
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
                     }
                     &.active {
-                        color: $navsidebar-sub-color-active;
-                        background-color: $navsidebar-sub-bg-active;
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
                     }
                 }
             }

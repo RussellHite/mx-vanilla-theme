@@ -9,7 +9,7 @@
 //== Elements
 //-------------------------------------------------------------------------------------------------------------------//
 .formblock-title {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
+    margin-bottom: $gutter-size;
+    padding-bottom: $gutter-size;
     border-bottom: 1px solid $gray-primary;
 }

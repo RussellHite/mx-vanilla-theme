@@ -5,9 +5,9 @@
 ========================================================================== */
 .layout-atlas-phone {
     .region-topbar {
-        min-height: 45px;
+        min-height: $m-header-height;
         border-style: none;
-        background-color: #FFF;
+        background-color: $text-light;
 
         &::before {
             display: none;

@@ -10,11 +10,11 @@ html {
 
 body {
     min-height: 100%;
-    color: $font-color-default;
-    background-color: $bg-color;
+    color: $gray;
+    background-color: $text-light;
     font-family: $font-family-base;
     font-size: $font-size-default;
-    font-weight: normal;
+    font-weight: 400;
     line-height: $line-height-base;
 }
 
@@ -23,13 +23,13 @@ a {
     -moz-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s;
-    color: $link-color;
+    color: $brand-info;
     -webkit-backface-visibility: hidden;
 }
 
 a:hover {
     text-decoration: underline;
-    color: $link-hover-color;
+    color: $brand-info;
 }
 
 // Address `outline` inconsistency between Chrome and other browsers.

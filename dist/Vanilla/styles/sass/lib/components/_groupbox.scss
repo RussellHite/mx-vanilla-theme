@@ -5,39 +5,31 @@
 ========================================================================== */
 
 .mx-groupbox {
-	> .mx-groupbox-header {
-		font-family: $font-primary;
-        font-weight: 600;
-		border-radius: 0;
-		margin: 0;
-		background: $gray-primary;
-		color: $gray-dark;
-		font-size: 18px;
-		border-style: solid;
-		border-width: 1px 1px 0 1px;
-		border-color: $gray-primary;
-
-		.mx-groupbox-collapse-icon {
-			margin-top: 0.1em;
-		}
-	}
-	> .mx-groupbox-body {
-		border-radius: 0;
-    	padding: 10px 15px;
-    	border-color: $gray-primary;
-    	background-color: #FFF;
-		border-style: solid;
-		border-width: 1px;
-
-  	}
-  	.mx-groupbox-header + .mx-groupbox-body {
-  		border-radius: 0;
-		border-top: none;
-	}
-
-	&.collapsed > .mx-groupbox-header {
-		border-radius: 0;
-	}
+    margin: 0;
+    > .mx-groupbox-header {
+        margin: 0;
+        color:  $gray;
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color:  $brand-default;
+        background:  $brand-default;
+        font-size: $font-size-h5;
+        .mx-groupbox-collapse-icon {
+            margin-top: 0.1em;
+        }
+    }
+    > .mx-groupbox-body {
+        padding: 10px 15px;
+        border-width: 1px;
+        border-style: solid;
+        border-color:  $brand-default;
+        background-color: #FFFFFF;
+    }
+    .mx-groupbox-header + .mx-groupbox-body {
+        border-top: none;
+    }
+    &.collapsed > .mx-groupbox-header {
+    }
 }
 
 //== Design Properties
@@ -45,55 +37,60 @@
 //-------------------------------------------------------------------------------------------------------------------//
 
 // Color variations 
-.mx-groupbox  {
-	// Color variations 
-	&.groupbox-default {
-		 @include groupbox-variant($gray-dark, $brand-default);
-	}
-	&.groupbox-primary {
-		@include groupbox-variant($gray-dark, $brand-primary);
-	}
-	&.groupbox-inverse {
-		@include groupbox-variant($gray-light, $brand-inverse);
-	}
-	// Success appears as green
-	&.groupbox-success {
-		@include groupbox-variant($gray-light, $brand-success);
-	}
-	// Info appears as blue-green
-	&.groupbox-info {
-		@include groupbox-variant($gray-light, $brand-info);
-	}
-	// Warning appears as orange
-	&.groupbox-warning {
-		@include groupbox-variant($gray-dark, $brand-warning);
-	}
-	// Danger and error appear as red
-	&.groupbox-danger {
-		@include groupbox-variant($gray-dark, $brand-danger);
-	}
-	// white appears as full white	
-	&.groupbox-white {
-		@include groupbox-variant($gray-dark, #fff);
-	}
-    &.groupbox-transparent  {
-        border-bottom: 1px solid $gray-primary;
-        > .mx-groupbox-header {
-            padding: 15px 0;
-            color: $gray-darker;
-            border-style: none;
-            background: transparent;
-            font-size: 16px;
-            font-weight: 700;
-        }
-        .mx-groupbox-body {
-            padding: 15px 0;
-            border-style: none;
-            background-color: transparent;
-        }
-        .mx-groupbox-collapse-icon {
-            color: $brand-primary;
-        }
+.groupbox-default {
+    @include groupbox-variant( $gray,  $brand-default);
+}
+
+.groupbox-primary {
+    @include groupbox-variant($text-light,  $brand-primary);
+}
+
+.groupbox-inverse {
+    @include groupbox-variant($text-light, $brand-inverse);
+}
+
+// Success appears as green
+.groupbox-success {
+    @include groupbox-variant($text-light, $brand-success);
+}
+
+// Info appears as blue-green
+.groupbox-info {
+    @include groupbox-variant($text-light, $brand-info);
+}
+
+// Warning appears as orange
+.groupbox-warning {
+    @include groupbox-variant($text-light, $brand-warning);
+}
+
+// Danger and error appear as red
+.groupbox-danger {
+    @include groupbox-variant($text-light, $brand-danger);
+}
+
+// white appears as full white	
+.groupbox-white {
+    @include groupbox-variant( $gray,  $text-light);
+}
+
+.groupbox-transparent {
+    border-bottom: 1px solid $gray-primary;
+    > .mx-groupbox-header {
+        padding: 15px 0;
+        color: $gray-darker;
+        border-style: none;
+        background: transparent;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .mx-groupbox-body {
+        padding: 15px 0;
+        border-style: none;
+        background-color: transparent;
+    }
+    .mx-groupbox-collapse-icon {
+        color: $brand-primary;
     }
 }
 
@@ -126,23 +123,18 @@
 .groupbox-callout {
     > .mx-groupbox-header,
     > .mx-groupbox-body {
-        border-radius: 0;
-        padding: 0;
-		border-style: none;
-		background-color: transparent;
+        border: 0;
+        background-color:  $brand-info-lighter;
     }
     .mx-groupbox-header + .mx-groupbox-body {
         padding-top: 0;
-        border-radius: 0;
-        border-style: none;
-		background-color: transparent;
     }
 }
 
 .groupbox-info.groupbox-callout {
     > .mx-groupbox-header,
     > .mx-groupbox-body {
-        background-color: $brand-info-light;
+        background-color:  $brand-info-lighter;
     }
     > .mx-groupbox-header {
         color: $brand-info;
@@ -152,7 +144,7 @@
 .groupbox-success.groupbox-callout {
     > .mx-groupbox-header,
     > .mx-groupbox-body {
-        background-color: $brand-success-light;
+        background-color: $brand-success-lighter;
     }
     > .mx-groupbox-header {
         color: $brand-success;
@@ -162,7 +154,7 @@
 .groupbox-warning.groupbox-callout {
     > .mx-groupbox-header,
     > .mx-groupbox-body {
-        background-color: $brand-warning-light;
+        background-color:  $brand-warning-lighter;
     }
     > .mx-groupbox-header {
         color: $brand-warning;
@@ -172,34 +164,9 @@
 .groupbox-danger.groupbox-callout {
     > .mx-groupbox-header,
     > .mx-groupbox-body {
-        background-color: $brand-danger-light;
+        background-color: $brand-danger-lighter;
     }
     > .mx-groupbox-header {
         color: $brand-danger;
     }
 }
-
-// Spacing
-.mx-groupbox {
-
-	&.groupbox-sideless  {
-		> .mx-groupbox-header {
-			padding-right: 0;
-			padding-left: 0;
-		}
-		> .mx-groupbox-body {
-			padding-right: 0;
-			padding-left: 0;
-	  	}
-	}
-
-	&.groupbox-bodyless  {
-		> .mx-groupbox-header {
-
-		}
-		> .mx-groupbox-body {
-			padding: 0;
-	  	}
-	}
-}
-

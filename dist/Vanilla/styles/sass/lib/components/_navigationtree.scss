@@ -16,18 +16,18 @@
             & > a {
                 display: flex;
                 align-items: center;
-                height: 60px;
-                padding: 5px 15px;
-                color: #fff;
-                border-bottom: 1px solid $navigation-border-color;
+                height: $navigation-item-height;
+                padding: $navigation-item-padding;
+                color: $text-light;
+                border-bottom: 1px solid $brand-inverse-light;
                 border-radius: 0;
                 background-color: $brand-inverse;
                 text-shadow: none;
-                font-size: 14px;
-                font-weight: normal;
+                font-size: $font-size-default;
+                font-weight: 400;
                 .caret {
-                    border-top-color: #fff;
-                    border-bottom-color: #fff;
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
                 }
                 img {
                     width: 20px; // Default size
@@ -38,24 +38,24 @@
                     top: 0;
                     margin-right: 0.5em;
                     vertical-align: middle;
-                    font-size: 20px;
+                    font-size: $font-size-h4;
                 }
             }
             a:hover,
             a:focus,
             a.active {
                 text-decoration: none;
-                color: #fff;
-                background-color: $navigation-bg-hover;
+                color: $brand-default-dark;
+                background-color: $brand-inverse-light;
                 .caret {
-                    border-top-color: #fff;
-                    border-bottom-color: #fff;
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
                 }
             }
             a.active {
-                color: #fff;
-                border-left-color: #fff;
-                background-color: $navigation-bg-active;
+                color: $text-light;
+                border-left-color: $text-light;
+                background-color: $brand-inverse-light;
             }
         }
     }
@@ -65,7 +65,7 @@
         & > ul {
             margin: 0;
             padding-left: 0;
-            background-color: $navigation-sub-bg;
+            background-color: $brand-inverse;
             li {
                 margin: 0;
                 padding: 0;
@@ -73,23 +73,23 @@
                 a {
                     padding: 12px 20px 12px 25px;
                     text-decoration: none;
-                    color: $navigation-sub-color;
+                    color: $gray-light;
                     border: 0;
-                    background-color: $navigation-sub-bg;
+                    background-color: $brand-inverse;
                     text-shadow: none;
-                    font-size: $navigation-sub-font-size;
-                    font-weight: normal;
+                    font-size: $font-size-small;
+                    font-weight: 400;
 
                     &:hover,
                     &:focus,
                     &.active {
-                        color: $navigation-sub-color-hover;
-                        background-color: $navigation-sub-bg-hover;
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
                     }
                     &.active {
-                        color: $navigation-sub-color-active;
+                        color:  $brand-primary;
                         border: 0;
-                        background-color: $navigation-sub-bg-active;
+                        background-color: $brand-inverse;
                     }
                 }
             }
@@ -108,17 +108,17 @@
 // When used in topbar
 .region-topbar {
     .mx-navigationtree {
-        background-color: #fff;
+        background-color: $text-light;
         .navbar-inner > ul {
             & > li {
                 & > a {
-                    color: $gray;
-                    border-color: $gray-primary;
-                    background-color: #fff;
-                    font-size: 14px;
+                    color:  $gray;
+                    border-color:  $brand-info;
+                    background-color: $text-light;
+                    font-size: $font-size-default;
                     .caret {
-                        border-top-color: $gray;
-                        border-bottom-color: $gray;
+                        border-top-color:  $gray;
+                        border-bottom-color:  $gray;
                     }
 
                     .glyphicon {
@@ -128,17 +128,17 @@
                 a:hover,
                 a:focus,
                 a.active {
-                    color: $gray;
-                    background-color: $navtopbar-bg-hover;
+                    color:  $gray;
+                    background-color: $text-light;
                     .caret {
-                        border-top-color: $navtopbar-color-active;
-                        border-bottom-color: $navtopbar-color-active;
+                        border-top-color:  $gray;
+                        border-bottom-color:  $gray;
                     }
                 }
                 a.active {
-                    color: $navtopbar-color-active;
-                    border-left-color: $navtopbar-color-active;
-                    background-color: $navtopbar-bg-active;
+                    color:  $gray;
+                    border-left-color:  $gray;
+                    background-color: $text-light;
                 }
             }
         }
@@ -146,21 +146,21 @@
         /* Sub navigation item specific */
         li.mx-navigationtree-has-items {
             & > ul {
-                background-color: $navtopbar-sub-bg;
+                background-color: $text-light;
                 li {
                     a {
-                        color: $navtopbar-sub-color;
-                        background-color: $navtopbar-sub-bg;
-                        font-size: $navtopbar-sub-font-size;
+                        color:  $gray-light;
+                        background-color: $text-light;
+                        font-size: $font-size-small;
                         &:hover,
                         &:focus,
                         &.active {
-                            color: $navtopbar-sub-color-hover;
-                            background-color: $navtopbar-sub-bg-hover;
+                            color:  $brand-primary;
+                            background-color: $text-light;
                         }
                         &.active {
-                            color: $navtopbar-sub-color-active;
-                            background-color: $navtopbar-sub-bg-active;
+                            color: $text-light;
+                            background-color: $text-light;
                         }
                     }
                 }
@@ -172,37 +172,37 @@
 // When used in sidebar
 .region-sidebar {
     .mx-navigationtree {
-        background-color: $navsidebar-bg;
+        background-color: $brand-inverse;
         .navbar-inner > ul {
             & > li {
                 & > a {
-                    color: #fff;
-                    border-color: $navsidebar-border-color;
-                    background-color: $navsidebar-bg;
-                    font-size: 14px;
+                    color: $text-light;
+                    border-color:  $brand-inverse-light;
+                    background-color: $brand-inverse;
+                    font-size: $font-size-default;
                     .caret {
-                        border-top-color: #fff;
-                        border-bottom-color: #fff;
+                        border-top-color: $text-light;
+                        border-bottom-color: $text-light;
                     }
 
                     .glyphicon {
-                        font-size: 20px;
+                        font-size: 1.3em;
                     }
                 }
                 a:hover,
                 a:focus,
                 a.active {
-                    color: #fff;
-                    background-color: $navsidebar-bg-hover;
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
                     .caret {
-                        border-top-color: #fff;
-                        border-bottom-color: #fff;
+                        border-top-color: $text-light;
+                        border-bottom-color: $text-light;
                     }
                 }
                 a.active {
-                    color: #fff;
-                    border-left-color: #fff;
-                    background-color: $navsidebar-bg-active;
+                    color: $text-light;
+                    border-left-color: $text-light;
+                    background-color: $brand-inverse-light;
                 }
             }
         }
@@ -210,21 +210,21 @@
         /* Sub navigation item specific */
         li.mx-navigationtree-has-items {
             & > ul {
-                background-color: $navsidebar-sub-bg;
+                background-color: $brand-inverse;
                 li {
                     a {
-                        color: $navsidebar-sub-color;
-                        background-color: $navsidebar-sub-bg;
-                        font-size: $navsidebar-sub-font-size;
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
+                        font-size:  $font-size-small;
                         &:hover,
                         &:focus,
                         &.active {
-                            color: $navsidebar-sub-color-hover;
-                            background-color: $navsidebar-sub-bg-hover;
+                            color:  $brand-primary;
+                            background-color: $brand-inverse;
                         }
                         &.active {
-                            color: $navsidebar-sub-color-active;
-                            background-color: $navsidebar-sub-bg-active;
+                            color:  $brand-primary;
+                            background-color: $brand-inverse;
                         }
                     }
                 }

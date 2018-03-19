@@ -4,21 +4,22 @@
 // Licensed under MIT (https://github.com/mendix/Atlas-UI-Framework/blob/master/LICENSE)
 //
 
-@import "../custom/custom-variables";
+//@import "../custom/custom-variables";
 
-@import "variables";
+@import "variables"; 
 
-// Base
-@import "base/animation";
-@import "base/reset";
-@import "base/base";
-
-// Mixins
+//mixins
 @import "mixins/animations";
 @import "mixins/spacing";
 @import "mixins/layout-spacing";
 @import "mixins/buttons";
 @import "mixins/groupbox";
+@import "mixins/flex-maker";
+
+// Base
+@import "base/animation";
+@import "base/reset";
+@import "base/base";
 
 // Components
 @import "components/inputs";
@@ -47,11 +48,12 @@
 @import "components/typography";
 @import "components/layoutgrid";
 @import "components/progress";
-@import "components/hover";
-@import "components/fade-in";
-@import "components/animate";
+@import "components/fonts";
+@import "components/font-awesome";
+@import "components/flex";/**/
 
 // Building Blocks
+/*
 @import "buildingblocks/alignment-block";
 @import "buildingblocks/breadcrumb";
 @import "buildingblocks/card";
@@ -62,12 +64,9 @@
 @import "buildingblocks/formblock";
 @import "buildingblocks/list";
 @import "buildingblocks/master-detail";
-@import "buildingblocks/userprofile";
+@import "buildingblocks/userprofile";*/
 @import "buildingblocks/wizard";
 @import "buildingblocks/timeline";
-
-//helpers
-@import "helpers/sass-flexbox";
 
 //layouts
 @import "layouts/layout-atlas";
@@ -82,3 +81,6 @@
 @import "customwidgets/slider-theme";
 @import "customwidgets/star-rating-theme";
 @import "customwidgets/switchwidget";
+
+//project
+@import "project/responsive";

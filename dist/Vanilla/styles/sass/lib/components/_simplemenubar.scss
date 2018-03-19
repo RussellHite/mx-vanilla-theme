@@ -18,12 +18,12 @@
                 align-items: center;
                 justify-content: center;
                 height: 100%;
-                padding: 5px 15px;
+                padding: $navigation-item-padding;
                 white-space: nowrap;
-                color: #fff;
+                color: $text-light;
                 border-radius: 0;
-                font-size: 14px;
-                font-weight: normal;
+                font-size: $font-size-default;
+                font-weight: 400;
                 img {
                     margin-right: 0.5em;
                 }
@@ -31,7 +31,7 @@
                     top: -1px;
                     margin-right: 0.5em;
                     vertical-align: middle;
-                    font-size: 20px;
+                    font-size: $font-size-h4;
                 }
             }
             a:hover,
@@ -40,12 +40,12 @@
             &:focus a,
             &.active a {
                 text-decoration: none;
-                color: #fff;
-                background-color: $navigation-bg-hover;
+                color: $brand-default-dark;
+                background-color: $brand-inverse-light;
             }
             &.active a {
-                color: #fff;
-                background-color: $navigation-bg-active;
+                color: $text-light;
+                background-color: $brand-inverse-light;
             }
         }
     }
@@ -64,7 +64,7 @@
         li.mx-menubar-item {
             display: block;
             a {
-                border-bottom: 1px solid lighten($brand-inverse, 4);
+                border-bottom: 1px solid $brand-inverse-light;
             }
         }
     }
@@ -109,12 +109,12 @@
 // When used in topbar
 .region-topbar {
     .mx-menubar {
-        background-color: #fff;
+        background-color: $text-light;
         ul.mx-menubar-list {
             li.mx-menubar-item {
                 a {
-                    color: $gray;
-                    font-size: 14px;
+                    color:  $gray;
+                    font-size: $font-size-default;
                     .glyphicon {
                         font-size: 1.2em;
                     }
@@ -124,12 +124,12 @@
                 &:hover a,
                 &:focus a,
                 &.active a {
-                    color: $navtopbar-color-hover;
-                    background-color: $navtopbar-bg-hover;
+                    color:  $gray;
+                    background-color: $text-light;
                 }
                 &.active a {
-                    color: $navtopbar-color-active;
-                    background-color: $navtopbar-bg-active;
+                    color:  $gray;
+                    background-color: $text-light;
                 }
             }
         }
@@ -137,12 +137,12 @@
 
     // Vertical variation specifics 
     .mx-menubar-vertical {
-        background-color: #fff;
+        background-color: $text-light;
         ul.mx-menubar-list {
             li.mx-menubar-item {
                 a {
-                    height: 60px;
-                    border-color: $gray-primary;
+                    height: $navigation-item-height;
+                    border-color:  $brand-info;
                 }
             }
         }
@@ -152,14 +152,14 @@
 // When used in sidebar
 .region-sidebar {
     .mx-menubar {
-        background-color: $navsidebar-bg;
+        background-color: $brand-inverse;
         ul.mx-menubar-list {
             li.mx-menubar-item {
                 a {
-                    color: #fff;
-                    font-size: 14px;
+                    color: $text-light;
+                    font-size: $font-size-default;
                     .glyphicon {
-                        font-size: 20px;
+                        font-size: 1.3em;
                     }
                 }
                 a:hover,
@@ -167,12 +167,12 @@
                 &:hover a,
                 &:focus a,
                 &.active a {
-                    color: #fff;
-                    background-color: $navsidebar-bg-hover;
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
                 }
                 &.active a {
-                    color: #fff;
-                    background-color: $navsidebar-bg-active;
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
                 }
             }
         }
@@ -180,11 +180,11 @@
 
     // Vertical variation specifics 
     .mx-menubar-vertical {
-        background-color: $navsidebar-bg;
+        background-color: $brand-inverse;
         ul.mx-menubar-list {
             li.mx-menubar-item {
                 a {
-                    border-color: $navsidebar-border-color;
+                    border-color:  $brand-inverse-light;
                 }
             }
         }

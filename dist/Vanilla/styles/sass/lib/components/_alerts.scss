@@ -19,25 +19,28 @@
 }
 
 // Color variations 
-.alert-success { 
-	border-color: $brand-success;
-	background-color: $brand-success-lighter;
-	color: $brand-success;
+.alert-success {
+    color:  $brand-success-darker;
+    border-color: $brand-success-dark;
+    background-color: $brand-success-lighter;
 }
-.alert-info { 
-	border-color: $brand-info;
-	background-color:$brand-info-lighter;
-	color: $brand-info;
+
+.alert-info {
+    color:  $brand-info-darker;
+    border-color:  $brand-info-dark;
+    background-color:  $brand-info-lighter;
 }
-.alert-warning { 
-	border-color: $brand-warning; 
-	background-color: $brand-warning-lighter;
-	color: $brand-warning;
+
+.alert-warning {
+    color:  $brand-warning-darker;
+    border-color: $brand-warning-dark;
+    background-color:  $brand-warning-lighter;
 }
-.alert-danger { 
-	border-color: $brand-danger;
-	background-color:$brand-danger-lighter; 
-	color: $brand-danger;
+
+.alert-danger {
+    color:   $brand-danger-darker;
+    border-color:  $brand-danger-dark;
+    background-color: $brand-danger-lighter;
 }
 
 //== State

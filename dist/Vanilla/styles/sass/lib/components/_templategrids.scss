@@ -9,14 +9,14 @@
         table-layout: fixed;
     }
     .mx-templategrid-item {
-        padding: $grid-padding-top $grid-padding-right $grid-padding-bottom $grid-padding-left;
+        padding:  $spacing-medium  $spacing-medium  $spacing-medium  $spacing-medium;
         cursor: default;
-        background-color: $grid-bg;
+        background-color:  $text-light;
         &:hover {
             background-color: transparent;
         }
         &.selected {
-            background-color: $grid-bg-selected !important;
+            background-color:   mix($gray-primary, $text-light, 30%) !important;
         }
     }
     .mx-layoutgrid {
@@ -32,12 +32,12 @@
 .templategrid-hover.mx-templategrid {
     .mx-templategrid-item {
         &:hover {
-            background-color: $grid-bg-hover !important;
+            background-color:  $brand-default-dark !important;
         }
         &.selected {
-            background-color: $grid-bg-selected !important;
+            background-color:   mix($gray-primary, $text-light, 30%) !important;
             &:hover {
-                background-color: $grid-bg-selected-hover !important;
+                background-color: mix($gray-primary, $text-light, 50%) !important;
             }
         }
     }
@@ -55,12 +55,12 @@
     .mx-grid-content {
         border-top-width: 2px;
         border-top-style: solid;
-        border-top-color: $gray-primary;
+        border-top-color: $gray-primary ;
     }
     .mx-templategrid-item {
-        border-top: 1px solid $gray-primary;
+        border-top: 1px solid $gray-primary ;
         border-right: none;
-        border-bottom: 1px solid $gray-primary;
+        border-bottom: 1px solid $gray-primary ;
         border-left: none;
     }
 }
@@ -102,13 +102,13 @@
 // Templategrid Row Sizes
 .templategrid-lg.mx-templategrid {
     .mx-templategrid-item {
-        padding: ($grid-padding-top * 2) ($grid-padding-right * 2) ($grid-padding-bottom * 2) ($grid-padding-left * 2);
+        padding: ( $spacing-medium * 2) ( $spacing-medium * 2) ( $spacing-medium * 2) ( $spacing-medium * 2);
     }
 }
 
 .templategrid-sm.mx-templategrid {
     .mx-templategrid-item {
-        padding: ($grid-padding-top / 2) ($grid-padding-right / 2) ($grid-padding-bottom / 2) ($grid-padding-left / 2);
+        padding: ( $spacing-medium / 2) ( $spacing-medium / 2) ( $spacing-medium / 2) ( $spacing-medium / 2);
     }
 }
 
@@ -120,8 +120,8 @@
     }
     .mx-templategrid-row {
         display: block;
-        margin-right: -1 * 15px;
-        margin-left: -1 * 15px;
+        margin-right: -1 * $gutter-size;
+        margin-left: -1 * $gutter-size;
 
         &::before,
         &::after {
@@ -137,8 +137,8 @@
         display: block;
         float: left;
         min-height: 1px;
-        padding-right: 15px;
-        padding-left: 15px;
+        padding-right: $gutter-size;
+        padding-left: $gutter-size;
         border: 0;
         @media (max-width: 992px) {
             width: 100% !important;

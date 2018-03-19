@@ -1,8 +1,8 @@
 .mx-progress {
-    color: $font-color-default;
-    background: $bg-color-secondary;
+    color: $gray;
+    background: $brand-default-lighter;
     .mx-progress-message {
-        color: $font-color-default;
+        color: $gray;
     }
     .mx-progress-indicator {
         position: relative;

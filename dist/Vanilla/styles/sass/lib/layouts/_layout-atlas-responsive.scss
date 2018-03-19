@@ -13,7 +13,7 @@
             .mx-scrollcontainer-wrapper > .mx-navigationtree ul li {
                 &.mx-navigationtree-has-items:hover {
                     a {
-                        background-color: $navsidebar-sub-bg;
+                        background-color: $brand-inverse;
                     }
 
                     ul {

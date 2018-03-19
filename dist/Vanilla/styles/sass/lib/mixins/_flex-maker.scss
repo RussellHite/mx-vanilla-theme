@@ -1,0 +1,11 @@
+@mixin flex-items($number) {
+    @for $i from 1 through $number{
+        .flex-#{$i}{
+            flex: #{$i} 1 1%; 
+        }
+    }
+    
+}  
+
+
+//@include flex-items($number: 12);

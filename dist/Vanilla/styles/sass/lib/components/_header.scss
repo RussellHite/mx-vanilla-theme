@@ -8,13 +8,14 @@
     z-index: 100;
     display: flex;
     width: 100%;
-    height: 45px;
+    height: $m-header-height;
     padding: 0;
     text-align: initial;
     color: $gray;
     border-bottom: 1px solid $gray-primary;
-    background-color: #FFF;
+    background-color: $text-light;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+
 
     // Reset mxui
     div.mx-header-left,
@@ -52,8 +53,8 @@
             margin: 0;
             text-overflow: ellipsis;
             color: $gray;
-            font-size: 17px;
-            line-height: 45px;
+            font-size: $font-size-h4;
+            line-height: $m-header-height;
         }
     }
     div.mx-header-right {
@@ -81,7 +82,7 @@
         &:active {
             -webkit-transform: translateY(1px);
             transform: translateY(1px);
-            color: $link-hover-color;
+            color: $brand-info;
         }
     }
 
@@ -93,7 +94,7 @@
 
     .mx-sidebartoggle {
         font-size: 24px;
-        line-height: 45px;
+        line-height: $m-header-height;
         img {
             height: 20px;
         }

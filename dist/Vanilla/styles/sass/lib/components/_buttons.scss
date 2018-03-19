@@ -6,43 +6,41 @@
 
 .btn,
 .mx-button {
-    /* MXID / Bootstrap values for when used in non-mendix apps */
     display: inline-block;
     margin-bottom: 0;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
+    padding: 0.6em 1em;
     cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    -o-user-select: none;
     user-select: none;
-
-    font-family: $font-primary;
-    font-weight: 400;
-    
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-
-    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color:  $brand-primary;
+    border: 1px solid transparent;
+    border-radius:  $border-radius-default;
+    background-color:  $text-light;
+    background-image: none;
     box-shadow: none;
-    padding: round(0.6 * 14px) round(1 * 14px);
-    background-color: $brand-default-light;
-    color: $brand-default-dark;
     text-shadow: none;
-    font-size: 14px;
+    font-size: $font-size-default;
     line-height: $line-height-base;
 
     &:hover,
     &:focus,
     &:active {
-        box-shadow: none;
         outline: none;
+        box-shadow: none;
+    }
+
+
+    @if $btn-bordered != false {
+        @extend .btn-bordered;
     }
 }
 
@@ -50,7 +48,6 @@
 .mx-link {
     padding: 0;
     color: $brand-info;
-
     a {
         color: inherit;
     }
@@ -62,10 +59,13 @@
 .mx-link {
     img {
         //height: auto; // MXUI override who set the height on 16px default
-        height:20px;
+        height: $font-size-default + 4px;
         margin-top: -1px;
         margin-right: 5px;
     }
+}
+.btn + .btn{
+    margin-left: 5px;
 }
 
 // IE 8 only (mxui overwrites)
@@ -80,77 +80,46 @@
 // Color variations 
 .btn,
 .btn-default {
-    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border-color, $btn-default-bg-hover);
+    @include button-variant( $brand-primary,  $text-light,  $brand-default,  $brand-default-dark);
 }
 
 .btn-primary {
-    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border-color, $btn-primary-bg-hover);
+    @include button-variant($text-light,  $brand-primary,  $brand-primary, $brand-primary-dark );
 }
 
 .btn-inverse {
-    @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border-color, $btn-inverse-bg-hover);
+    @include button-variant($text-light, $brand-inverse, $brand-inverse,  $brand-inverse-light);
 }
 
-// Success appears as green
 .btn-success {
-    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border-color, $btn-success-bg-hover);
+    @include button-variant($text-light, $brand-success, $brand-success, $brand-success-dark);
 }
 
-// Info appears as blue-green
 .btn-info {
-    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border-color, $btn-info-bg-hover);
+    @include button-variant($text-light, $brand-info, $brand-info, $brand-info-dark);
 }
 
-// Warning appears as orange
 .btn-warning {
-    @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border-color, $btn-warning-bg-hover);
+    @include button-variant($text-light, $brand-warning ,  $brand-warning, $brand-warning );
 }
 
-// Danger and error appear as red
 .btn-danger {
-    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border-color, $btn-danger-bg-hover);
+    @include button-variant($text-light, $brand-danger, $brand-danger,  $brand-danger-dark);
 }
 
-// Button as link but with padding 
-.btn-link {
-    border: 0;
-    background-color: transparent;
-    color: $brand-info;
 
-    &:hover {
-        background-color: transparent;
-        color: $brand-info-dark;
-    }
-}
-/* Buttons appear disabled */
-.btn-disabled {
-    opacity: 0.65;
-    filter: alpha(opacity=65); /* For IE8 and earlier */
-
-    cursor: not-allowed;
-    pointer-events: none;
-}
-// Transparent
-.btn-transparent,
-.btn-transparent:hover,
-.btn-transparent:focus {
-    border-style: none;
-    background-color: transparent;
-}
-
-// Buttons Sizes
+// Button Sizes
 .btn-lg {
-    font-size: 18px;
-    padding: round(0.6 * 18px) round(1 * 18px);  // only for buttons
+    font-size: $font-size-large;
     img {
-        height: 16px + 4px;
+        height: calc($font-size-small + 4px);
     }
 }
+
 .btn-sm {
-    font-size: 10px;
-    padding: round(0.6 * 10px) round(1 * 10px); 
+    font-size: $font-size-small;
     img {
-        height: 10px + 4px;
+        height: calc($font-size-small + 4px);
     }
 }
 
@@ -193,29 +162,6 @@
         margin: 0 0 5px 0;
     }
 }
-
-/* Buttons Position */
-.btn-right {
-    float: right;
-}
-.btn-left {
-    float: left;
-}
-
-/* Buttons Attached */
-.btn-attached-right {
-    margin-left: 5px;
-}
-.btn-attached-left {
-    margin-right: 5px;
-}
-.btn-attached-bottom {
-    margin-top: 5px;
-}
-.btn-attached-top {
-    margin-bottom: 5px;
-}
-
 
 //== Phone specific 
 //-------------------------------------------------------------------------------------------------------------------//

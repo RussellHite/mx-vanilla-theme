@@ -6,40 +6,31 @@
 ========================================================================== */
 
 .mx-tabcontainer {
-	.mx-tabcontainer-tabs {
-		margin-bottom: 20px;
-		border-color: $brand-default-dark;
-		> li > a {
-			font-family: $font-primary;
+    .mx-tabcontainer-tabs {
+        margin-bottom: 20px;
+        border-color: $gray-primary ;
+        > li > a {
+            margin-right: 0;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            color:  $gray-light;
             font-weight: 400;
-
-			-moz-transition: all .2s ease-in-out;
-			-o-transition: all .2s ease-in-out;
-			-webkit-transition: all .2s ease-in-out;
-			transition: all .2s ease-in-out;
-
-			margin-right: 0;
-			color: $gray-dark;
-			
-			&:hover,
-			&:focus {
-				background-color: $brand-default;
-                color: $gray;
-			}
-		}
-
-		> li.active > a,
-		> li.active > a:hover,
-		> li.active > a:focus  {
-			border: 1px solid  $brand-default-dark;
-			border-bottom-color: transparent;
-			background-color: #FFF;
-			color:$gray-dark;
-		}
-	}
-	.mx-tabcontainer-content {
-
-	}
+            &:hover,
+            &:focus {
+                background-color: $gray-primary ;
+            }
+        }
+        > li.active > a,
+        > li.active > a:hover,
+        > li.active > a:focus {
+            color:  $gray;
+            border: 1px solid $gray-primary ;
+            border-bottom-color: transparent;
+            background-color: $text-light;
+        }
+    }
 }
 
 //== Design Properties
@@ -47,66 +38,58 @@
 //-------------------------------------------------------------------------------------------------------------------//
 // Style as pills
 .tab-pills.mx-tabcontainer {
-	.mx-tabcontainer-tabs {
-		border: 0;
-		> li > a {
-			border-radius: 4px;
-			margin-right: 2px;
-			border: 1px solid $gray;
-			color: $brand-default-light;
-
-			&:hover,
-			&:focus {
-				background-color: #fff;
-                color: $gray;
-			}
-		}
-
-		> li.active > a,
-		> li.active > a:hover,
-		> li.active > a:focus  {
-			background-color: #fff;
-			color: $brand-default-dark;
-			border-color: $brand-default-dark;
-		}
-	}
+    .mx-tabcontainer-tabs {
+        border: 0;
+        > li > a {
+            margin-right: 2px;
+            color:  $gray-light;
+            border: 1px solid $gray-primary ;
+            border-radius: 4px;
+            &:hover,
+            &:focus {
+                background-color: $gray-primary ;
+            }
+        }
+        > li.active > a,
+        > li.active > a:hover,
+        > li.active > a:focus {
+            color: #FFFFFF;
+            border-color:  $brand-primary;
+            background-color:  $brand-primary;
+        }
+    }
 }
 
 // Style with lines
 .tab-lined.mx-tabcontainer {
-	.mx-tabcontainer-tabs {
+    .mx-tabcontainer-tabs {
         border-width: 3px;
-
         li {
-            margin-bottom: -3px;
             margin-right: 30px;
-
+            margin-bottom: -3px;
             > a {
                 padding: 10px 0;
+                color:  $gray-light;
                 border: 0;
                 border-style: solid;
                 border-color: transparent;
                 border-bottom-width: 3px;
-				border-radius: 0;
-				color: $gray;
-
-                &:hover, 
+                border-radius: 0;
+                &:hover,
                 &:focus {
-                	border: 0;
+                    color:  $gray-light;
+                    border: 0;
                     border-color: transparent;
                     background: transparent;
-                    color: $brand-default-dark;
                 }
-
             }
-
             &.active > a,
-            &.active > a:hover, 
-            &.active > a:focus  {
-            	border: 0;
-                border-bottom: 3px solid $brand-default-dark;
+            &.active > a:hover,
+            &.active > a:focus {
+                color:  $brand-primary;
+                border: 0;
+                border-bottom: 3px solid  $brand-primary;
                 background-color: transparent;
-                color: $brand-default-dark;
             }
         }
     }
@@ -115,49 +98,45 @@
 // Justified style
 // Lets your tabs take 100% of the width
 .tab-justified.mx-tabcontainer {
-	.mx-tabcontainer-tabs {
-		width: 100%;
-		border-bottom: 0;
-
-		> li {
-			display: table-cell;	
-			float: none;
-			margin: 0;
-			width: 1%;
-			@media (max-width: 768px) {
-				display: block;
-				width: 100%;
-			}	
-			> a {
-				border-bottom: 1px solid $brand-default-dark;
-				text-align: center;
-			}
-		
-		}
-		> li.active > a {
-			border-radius: 4px;
-			border-bottom-color: transparent;
-
-			@media (max-width: 768px) {
-				border-bottom-color: $brand-default-dark;
-			}
-		}
-	}
+    .mx-tabcontainer-tabs {
+        width: 100%;
+        border-bottom: 0;
+        > li {
+            display: table-cell;
+            float: none;
+            width: 1%;
+            margin: 0;
+            @media (max-width: $screen-xs-max) {
+                display: block;
+                width: 100%;
+            }
+            > a {
+                text-align: center;
+                border-bottom: 1px solid $gray-primary ;
+            }
+        }
+        > li.active > a {
+            border-bottom-color: transparent;
+            border-radius: 4px;
+            @media (max-width: $screen-xs-max) {
+                border-bottom-color: $gray-primary ;
+            }
+        }
+    }
 }
 
 // Bordered
 .tab-bordered.mx-tabcontainer {
-	.mx-tabcontainer-tabs {
-		margin: 0;
-	}
-
-	.mx-tabcontainer-content {
-		padding: 10px;
-		border-width: 0 1px 1px 1px;
-		border-style: solid;
-		border-color: $brand-default-dark;
-		background-color: #FFF;
-	}
+    .mx-tabcontainer-tabs {
+        margin: 0;
+    }
+    .mx-tabcontainer-content {
+        padding: 10px;
+        border-width: 0 1px 1px 1px;
+        border-style: solid;
+        border-color: $gray-primary ;
+        background-color: #FFFFFF;
+    }
 }
 
 // Wizard
@@ -175,7 +154,7 @@
             width: 100%;
             display: block;
             top: 16px;
-            background-color: $gray-primary;
+            background-color: $gray-primary ;
         }
         > li {
             position: relative;
@@ -192,7 +171,7 @@
                 font-size: 18px;
                 font-weight: bold;
                 color: $brand-default;
-                border: 1px solid $gray-primary;
+                border: 1px solid $gray-primary ;
                 background-color: #FFFFFF;
                 border-radius: 100%;
             }
@@ -201,8 +180,8 @@
                 > a:hover,
                 > a:focus {
                     color: #FFFFFF;
-                    border-color: $brand-primary;
-                    background-color: $brand-primary;
+                    border-color:  $brand-primary;
+                    background-color:  $brand-primary;
                 }
             }
         }
@@ -233,7 +212,7 @@
                 border-color: rgba(255,255,255,0.3);
                 border-radius: 0;
                 font-size: 12px;
-                font-weight: normal;
+                font-weight: 400;
                 &:hover,
                 &:focus {
                     background-color: inherit;

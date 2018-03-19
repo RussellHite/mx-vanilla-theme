@@ -16,7 +16,7 @@
     border-left: 1px solid $gray-primary;
     & > ul > .mx-listview-item {
         position: relative;
-        padding-left: (15px * 2);
+        padding-left: ($gutter-size * 2);
 
         &::before {
             position: absolute;
@@ -40,7 +40,7 @@
 .timeline2 {
     .timeline-itemwrapper.mx-listview {
         & > ul > .mx-listview-item {
-            padding-left: 15px;
+            padding-left: $gutter-size;
         }
     }
 }

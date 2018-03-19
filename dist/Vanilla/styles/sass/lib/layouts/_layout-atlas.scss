@@ -11,7 +11,7 @@
 
     // Sidebar
     .region-sidebar {
-        background-color: $navsidebar-bg;
+        background-color: $brand-inverse;
 
         .mx-navigationtree .navbar-inner > ul > li > a {
             padding: 0 15px;
@@ -31,9 +31,9 @@
     .region-topbar {
         position: relative;
         z-index: 1; // Show dropshadow
-        min-height: $topbar-minimalheight;
-        border-bottom: 1px solid $gray-primary;
-        background-color: #fff;
+        min-height: $topbar-minheight;
+        border-bottom: 1px solid  $brand-info;
+        background-color: $text-light;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 
         &::before {
@@ -48,7 +48,7 @@
         .topbar-content {
             display: flex;
             align-items: center;
-            min-height: $topbar-minimalheight;
+            min-height: $topbar-minheight;
         }
 
         // Toggle btn
@@ -84,7 +84,7 @@
 
             a {
                 margin-left: 5px;
-                color: $navbar-brand-name;
+                color: $gray;
                 font-size: 20px;
 
                 &:hover,
@@ -96,7 +96,7 @@
 
         .mx-navbar {
             display: inline-block;
-            margin-left: 15px;
+            margin-left: $gutter-size;
             vertical-align: middle;
             background: transparent;
 

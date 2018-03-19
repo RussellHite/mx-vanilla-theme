@@ -53,7 +53,6 @@
     }
     .dijitCalendarMonthLabel {
         color: $brand-primary;
-        font-weight: 600;
     }
     .dijitButtonNode {
         border: 0;
@@ -63,7 +62,7 @@
     }
     .dijitCalendarSelectedDate,
     .dijitCalendarSelectedDate:hover {
-        border-radius: 10px;
+        border-radius: 50%;
         background: $brand-primary;
         .dijitCalendarDateLabel {
             color: #FFFFFF;
@@ -82,7 +81,6 @@
             color: lighten($brand-primary, 30);
             &.dijitCalendarSelectedYear {
                 color: $brand-primary;
-                font-weight: 600;
             }
             &:hover {
                 text-decoration: underline;
@@ -225,7 +223,7 @@
         /* For IE8 and earlier */
         margin: 0;
         opacity: 0.6;
-        background-color: #AAAAAA;
+        background-color: $gray-light;
         background-image: none;
         font-size: 1px;
         filter: alpha(opacity=60);
@@ -289,7 +287,7 @@
         // New label
         .tg_newlabelmenuitem {
             .dijitMenuItemLabel {
-                font-weight: 600;
+                font-weight: $gray-light;
             }
         }
         // Seperator

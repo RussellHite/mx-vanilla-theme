@@ -7,12 +7,12 @@
     position: relative;
     @media (min-width: $screen-md) {
         .mx-layoutgrid {
-            padding: 0 15px !important;
+            padding: 0 $gutter-size !important;
         }
     }
     .masterdetail-master {
         .controlgroup {
-            margin-bottom: 15px;
+            margin-bottom: $gutter-size;
         }
         @media (min-width: $screen-md) {
             position: absolute;
@@ -23,11 +23,11 @@
             border-right: 1px solid $gray-primary;
 
             .mx-listview-searchbar {
-                margin: 15px;
+                margin: $gutter-size;
             }
             .controlgroup {
                 margin: 0;
-                padding: 15px;
+                padding: $gutter-size;
                 border-bottom: 1px solid $gray-primary;
             }
         }
