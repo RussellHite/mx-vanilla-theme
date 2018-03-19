@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Navigation
+
+   Default Mendix Navigation Tree
+========================================================================== */
+.mx-navigationtree {
+    background-color: $brand-inverse;
+
+    /* Every navigation item */
+    .navbar-inner > ul {
+        margin: 0;
+        padding-left: 0;
+        & > li {
+            padding: 0;
+            border-style: none;
+            & > a {
+                display: flex;
+                align-items: center;
+                height: $navigation-item-height;
+                padding: $navigation-item-padding;
+                color: $text-light;
+                border-bottom: 1px solid $brand-inverse-light;
+                border-radius: 0;
+                background-color: $brand-inverse;
+                text-shadow: none;
+                font-size: $font-size-default;
+                font-weight: 400;
+                .caret {
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
+                }
+                img {
+                    width: 20px; // Default size
+                    height: auto;
+                    margin-right: 0.5em;
+                }
+                .glyphicon {
+                    top: 0;
+                    margin-right: 0.5em;
+                    vertical-align: middle;
+                    font-size: $font-size-h4;
+                }
+            }
+            a:hover,
+            a:focus,
+            a.active {
+                text-decoration: none;
+                color: $brand-default-dark;
+                background-color: $brand-inverse-light;
+                .caret {
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
+                }
+            }
+            a.active {
+                color: $text-light;
+                border-left-color: $text-light;
+                background-color: $brand-inverse-light;
+            }
+        }
+    }
+
+    /* Sub navigation item specific */
+    li.mx-navigationtree-has-items {
+        & > ul {
+            margin: 0;
+            padding-left: 0;
+            background-color: $brand-inverse;
+            li {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                a {
+                    padding: 12px 20px 12px 25px;
+                    text-decoration: none;
+                    color: $gray-light;
+                    border: 0;
+                    background-color: $brand-inverse;
+                    text-shadow: none;
+                    font-size: $font-size-small;
+                    font-weight: 400;
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
+                    }
+                    &.active {
+                        color:  $brand-primary;
+                        border: 0;
+                        background-color: $brand-inverse;
+                    }
+                }
+            }
+        }
+    }
+
+    /* remove focus */
+    &:focus {
+        outline: 0;
+    }
+}
+
+//== Regions
+//## Behavior in the different regions
+//-------------------------------------------------------------------------------------------------------------------//
+// When used in topbar
+.region-topbar {
+    .mx-navigationtree {
+        background-color: $text-light;
+        .navbar-inner > ul {
+            & > li {
+                & > a {
+                    color:  $gray;
+                    border-color:  $brand-info;
+                    background-color: $text-light;
+                    font-size: $font-size-default;
+                    .caret {
+                        border-top-color:  $gray;
+                        border-bottom-color:  $gray;
+                    }
+
+                    .glyphicon {
+                        font-size: 1.2em;
+                    }
+                }
+                a:hover,
+                a:focus,
+                a.active {
+                    color:  $gray;
+                    background-color: $text-light;
+                    .caret {
+                        border-top-color:  $gray;
+                        border-bottom-color:  $gray;
+                    }
+                }
+                a.active {
+                    color:  $gray;
+                    border-left-color:  $gray;
+                    background-color: $text-light;
+                }
+            }
+        }
+
+        /* Sub navigation item specific */
+        li.mx-navigationtree-has-items {
+            & > ul {
+                background-color: $text-light;
+                li {
+                    a {
+                        color:  $gray-light;
+                        background-color: $text-light;
+                        font-size: $font-size-small;
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            color:  $brand-primary;
+                            background-color: $text-light;
+                        }
+                        &.active {
+                            color: $text-light;
+                            background-color: $text-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// When used in sidebar
+.region-sidebar {
+    .mx-navigationtree {
+        background-color: $brand-inverse;
+        .navbar-inner > ul {
+            & > li {
+                & > a {
+                    color: $text-light;
+                    border-color:  $brand-inverse-light;
+                    background-color: $brand-inverse;
+                    font-size: $font-size-default;
+                    .caret {
+                        border-top-color: $text-light;
+                        border-bottom-color: $text-light;
+                    }
+
+                    .glyphicon {
+                        font-size: 1.3em;
+                    }
+                }
+                a:hover,
+                a:focus,
+                a.active {
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
+                    .caret {
+                        border-top-color: $text-light;
+                        border-bottom-color: $text-light;
+                    }
+                }
+                a.active {
+                    color: $text-light;
+                    border-left-color: $text-light;
+                    background-color: $brand-inverse-light;
+                }
+            }
+        }
+
+        /* Sub navigation item specific */
+        li.mx-navigationtree-has-items {
+            & > ul {
+                background-color: $brand-inverse;
+                li {
+                    a {
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
+                        font-size:  $font-size-small;
+                        &:hover,
+                        &:focus,
+                        &.active {
+                            color:  $brand-primary;
+                            background-color: $brand-inverse;
+                        }
+                        &.active {
+                            color:  $brand-primary;
+                            background-color: $brand-inverse;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+// Content Centerd text and icons
+.nav-content-center-text-icons.mx-navigationtree {
+    .navbar-inner ul {
+        a {
+            flex-direction: column;
+            justify-content: center;
+            .glyphicon {
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+}
+
+// Content Centerd icons only
+.nav-content-center.mx-navigationtree {
+    .navbar-inner ul {
+        a {
+            justify-content: center;
+        }
+    }
+}

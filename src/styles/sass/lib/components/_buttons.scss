@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Buttons
+
+   Default Bootstrap and Mendix Buttons
+========================================================================== */
+
+.btn,
+.mx-button {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0.6em 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color:  $brand-primary;
+    border: 1px solid transparent;
+    border-radius:  $border-radius-default;
+    background-color:  $text-light;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: $font-size-default;
+    line-height: $line-height-base;
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
+
+
+    @if $btn-bordered != false {
+        @extend .btn-bordered;
+    }
+}
+
+// Mendix button link
+.mx-link {
+    padding: 0;
+    color: $brand-info;
+    a {
+        color: inherit;
+    }
+}
+
+// Images and icons in buttons
+.btn,
+.mx-button,
+.mx-link {
+    img {
+        //height: auto; // MXUI override who set the height on 16px default
+        height: $font-size-default + 4px;
+        margin-top: -1px;
+        margin-right: 5px;
+    }
+}
+.btn + .btn{
+    margin-left: 5px;
+}
+
+// IE 8 only (mxui overwrites)
+.dj_ie8 .mx-link {
+    margin-right: 0;
+    white-space: normal;
+}
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+// Color variations 
+.btn,
+.btn-default {
+    @include button-variant( $brand-primary,  $text-light,  $brand-default,  $brand-default-dark);
+}
+
+.btn-primary {
+    @include button-variant($text-light,  $brand-primary,  $brand-primary, $brand-primary-dark );
+}
+
+.btn-inverse {
+    @include button-variant($text-light, $brand-inverse, $brand-inverse,  $brand-inverse-light);
+}
+
+.btn-success {
+    @include button-variant($text-light, $brand-success, $brand-success, $brand-success-dark);
+}
+
+.btn-info {
+    @include button-variant($text-light, $brand-info, $brand-info, $brand-info-dark);
+}
+
+.btn-warning {
+    @include button-variant($text-light, $brand-warning ,  $brand-warning, $brand-warning );
+}
+
+.btn-danger {
+    @include button-variant($text-light, $brand-danger, $brand-danger,  $brand-danger-dark);
+}
+
+
+// Button Sizes
+.btn-lg {
+    font-size: $font-size-large;
+    img {
+        height: calc($font-size-small + 4px);
+    }
+}
+
+.btn-sm {
+    font-size: $font-size-small;
+    img {
+        height: calc($font-size-small + 4px);
+    }
+}
+
+// Button Image 
+.btn-image {
+    padding: 0;
+    vertical-align: middle;
+    border-style: none;
+    background-color: transparent;
+    img {
+        display: block; // or else the button doesn't get a width 
+        height: auto; // Image set height
+    }
+    &:hover,
+    &:focus {
+        background-color: transparent;
+    }
+}
+
+// Icon buttons
+.btn-icon {
+    & > img,
+    & > .glyphicon {
+        margin: 0;
+    }
+}
+.btn-icon-right {
+    & > img,
+    & > .glyphicon {
+        float: right;
+        margin-left: 5px;
+    }
+}
+.btn-icon-top {
+    padding-right: 0;
+    padding-left: 0;
+    & > img,
+    & > .glyphicon {
+        display: block;
+        margin: 0 0 5px 0;
+    }
+}
+
+//== Phone specific 
+//-------------------------------------------------------------------------------------------------------------------//
+.profile-phone {
+    .btn,
+    .mx-link {
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        &:active {
+            -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+        }
+    }
+}

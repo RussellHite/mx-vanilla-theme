@@ -1,0 +1,308 @@
+/* ==========================================================================
+   Navigation
+
+   Default Mendix Navigation Bar
+========================================================================== */
+.mx-navbar {
+    margin: 0;
+    border-style: none;
+    border-radius: 0;
+    background-color: $brand-inverse;
+    ul.nav {
+        margin: 0; // weird -margin if screen gets small (bootstrap)
+
+        /* Navigation item */
+        & > li.mx-navbar-item > a {
+            display: flex;
+            align-items: center;
+            min-height: $topbar-minheight;
+            padding: $navigation-item-padding;
+            vertical-align: middle;
+            color: $text-light;
+            border-radius: 0;
+            font-size: $font-size-default;
+            font-weight: 400;
+
+            /* Dropdown arrow */
+            .caret {
+                border-top-color: $text-light;
+                border-bottom-color: $text-light;
+            }
+            &:hover,
+            &:focus,
+            &.active {
+                text-decoration: none;
+                color: $brand-default-dark;
+                background-color: $brand-inverse-light;
+                .caret {
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
+                }
+            }
+            &.active {
+                color: $text-light;
+                background-color: $brand-inverse-light;
+            }
+
+            /* Dropdown */
+            .mx-navbar-submenu::before {
+                position: absolute;
+                top: -9px;
+                left: 15px;
+                width: 0;
+                height: 0;
+                content: "";
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+                border-width: 0 9px 9px 9px;
+                border-style: solid;
+                border-color: transparent transparent $brand-inverse-light transparent;
+            }
+
+            // Image
+            img {
+                width: 20px; // Default size (so it looks good)
+                height: auto;
+                margin-right: 0.5em;
+            }
+            .glyphicon {
+                top: 0;
+                margin-right: 0.5em;
+                vertical-align: middle;
+                font-size: $font-size-h4;
+            }
+        }
+
+        /* When hovering or the dropdown is open */
+        & > .mx-navbar-item > a:hover,
+        & > .mx-navbar-item > a:focus,
+        & > .mx-navbar-item.active a,
+        & > .mx-navbar-item.open > a,
+        & > .mx-navbar-item.open > a:hover,
+        & > .mx-navbar-item.open > a:focus {
+            text-decoration: none;
+            color: $brand-default-dark;
+            background-color: $brand-inverse-light;
+            .caret {
+                border-top-color: $brand-default-dark;
+                border-bottom-color: $brand-default-dark;
+            }
+        }
+        & > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
+            color:  $brand-primary;
+            background-color: $brand-inverse;
+            .caret {
+                border-top-color:  $brand-primary;
+                border-bottom-color:  $brand-primary;
+            }
+        }
+    }
+    @media (max-width: $screen-sm) {
+        ul.nav > li.mx-navbar-item > a {
+            padding: 10px 20px;
+        }
+        .mx-navbar-item.open .dropdown-menu {
+            padding: 0;
+            border-radius: 0;
+            background-color: $brand-inverse;
+            & > li.mx-navbar-subitem > a {
+                padding: 10px 20px;
+                color: $gray-light;
+                border-radius: 0;
+                font-size: $font-size-small;
+                font-weight: 400;
+                &:hover,
+                &:focus {
+                    color:  $brand-primary;
+                    background-color: $brand-inverse;
+                }
+                &.active {
+                    color:  $brand-primary;
+                    background-color: $brand-inverse;
+                }
+            }
+        }
+    }
+
+    /* remove focus */
+    &:focus {
+        outline: 0;
+    }
+}
+
+//== Regions
+//## Behavior in the different regions
+//-------------------------------------------------------------------------------------------------------------------//
+// When used in topbar
+.region-topbar {
+    .mx-navbar {
+        background-color: $text-light;
+        ul.nav {
+            /* Navigation item */
+            & > li.mx-navbar-item > a {
+                color:  $gray;
+                font-size: $font-size-default;
+
+                /* Dropdown arrow */
+                .caret {
+                    border-top-color:  $gray;
+                    border-bottom-color:  $gray;
+                }
+                &:hover,
+                &:focus,
+                &.active {
+                    color:  $gray;
+                    background-color: $text-light;
+                    .caret {
+                        border-top-color:  $gray;
+                        border-bottom-color:  $gray;
+                    }
+                }
+                &.active {
+                    color:  $gray;
+                    background-color: $text-light;
+                }
+
+                /* Dropdown */
+                .mx-navbar-submenu::before {
+                    border-color: transparent transparent  $brand-info transparent;
+                }
+
+                // Image
+                .glyphicon {
+                    font-size: 1.2em;
+                }
+            }
+
+            /* When hovering or the dropdown is open */
+            & > .mx-navbar-item > a:hover,
+            & > .mx-navbar-item > a:focus,
+            & > .mx-navbar-item.active a,
+            & > .mx-navbar-item.open > a,
+            & > .mx-navbar-item.open > a:hover,
+            & > .mx-navbar-item.open > a:focus {
+                color:  $gray;
+                background-color: $text-light;
+                .caret {
+                    border-top-color:  $gray;
+                    border-bottom-color:  $gray;
+                }
+            }
+            & > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
+                color: $text-light;
+                background-color: $text-light;
+                .caret {
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
+                }
+            }
+        }
+        @media (max-width: $screen-sm) {
+            ul.nav > li.mx-navbar-item > a {
+            }
+            .mx-navbar-item.open .dropdown-menu {
+                background-color: $text-light;
+                & > li.mx-navbar-subitem > a {
+                    color:  $gray-light;
+                    font-size: $font-size-small;
+                    &:hover,
+                    &:focus {
+                        color:  $brand-primary;
+                        background-color: $text-light;
+                    }
+                    &.active {
+                        color: $text-light;
+                        background-color: $text-light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// When used in sidebar
+.region-sidebar {
+    .mx-navbar {
+        background-color: $brand-inverse;
+        ul.nav {
+            /* Navigation item */
+            & > li.mx-navbar-item > a {
+                color: $text-light;
+                font-size: $font-size-default;
+
+                /* Dropdown arrow */
+                .caret {
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
+                }
+                &:hover,
+                &:focus,
+                &.active {
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
+                    .caret {
+                        border-top-color: $text-light;
+                        border-bottom-color: $text-light;
+                    }
+                }
+                &.active {
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
+                }
+
+                /* Dropdown */
+                .mx-navbar-submenu::before {
+                    border-color: transparent transparent  $brand-inverse-light transparent;
+                }
+
+                // Image
+                .glyphicon {
+                    font-size: 1.3em;
+                }
+            }
+
+            /* When hovering or the dropdown is open */
+            & > .mx-navbar-item > a:hover,
+            & > .mx-navbar-item > a:focus,
+            & > .mx-navbar-item.active a,
+            & > .mx-navbar-item.open > a,
+            & > .mx-navbar-item.open > a:hover,
+            & > .mx-navbar-item.open > a:focus {
+                color: $text-light;
+                background-color: $brand-inverse-light;
+                .caret {
+                    border-top-color: $text-light;
+                    border-bottom-color: $text-light;
+                }
+            }
+            & > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
+                color:  $brand-primary;
+                background-color: $brand-inverse;
+                .caret {
+                    border-top-color:  $brand-primary;
+                    border-bottom-color:  $brand-primary;
+                }
+            }
+        }
+        @media (max-width: $screen-sm) {
+            ul.nav > li.mx-navbar-item > a {
+            }
+            .mx-navbar-item.open .dropdown-menu {
+                background-color: $text-light;
+                & > li.mx-navbar-subitem > a {
+                    color:  $brand-primary;
+                    font-size:  $font-size-small;
+                    &:hover,
+                    &:focus {
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
+                    }
+                    &.active {
+                        color:  $brand-primary;
+                        background-color: $brand-inverse;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Groupbox
+
+   Default Mendix Groupboxes
+========================================================================== */
+
+.mx-groupbox {
+    margin: 0;
+    > .mx-groupbox-header {
+        margin: 0;
+        color:  $gray;
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color:  $brand-default;
+        background:  $brand-default;
+        font-size: $font-size-h5;
+        .mx-groupbox-collapse-icon {
+            margin-top: 0.1em;
+        }
+    }
+    > .mx-groupbox-body {
+        padding: 10px 15px;
+        border-width: 1px;
+        border-style: solid;
+        border-color:  $brand-default;
+        background-color: #FFFFFF;
+    }
+    .mx-groupbox-header + .mx-groupbox-body {
+        border-top: none;
+    }
+    &.collapsed > .mx-groupbox-header {
+    }
+}
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+
+// Color variations 
+.groupbox-default {
+    @include groupbox-variant( $gray,  $brand-default);
+}
+
+.groupbox-primary {
+    @include groupbox-variant($text-light,  $brand-primary);
+}
+
+.groupbox-inverse {
+    @include groupbox-variant($text-light, $brand-inverse);
+}
+
+// Success appears as green
+.groupbox-success {
+    @include groupbox-variant($text-light, $brand-success);
+}
+
+// Info appears as blue-green
+.groupbox-info {
+    @include groupbox-variant($text-light, $brand-info);
+}
+
+// Warning appears as orange
+.groupbox-warning {
+    @include groupbox-variant($text-light, $brand-warning);
+}
+
+// Danger and error appear as red
+.groupbox-danger {
+    @include groupbox-variant($text-light, $brand-danger);
+}
+
+// white appears as full white	
+.groupbox-white {
+    @include groupbox-variant( $gray,  $text-light);
+}
+
+.groupbox-transparent {
+    border-bottom: 1px solid $gray-primary;
+    > .mx-groupbox-header {
+        padding: 15px 0;
+        color: $gray-darker;
+        border-style: none;
+        background: transparent;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .mx-groupbox-body {
+        padding: 15px 0;
+        border-style: none;
+        background-color: transparent;
+    }
+    .mx-groupbox-collapse-icon {
+        color: $brand-primary;
+    }
+}
+
+// Header options
+.groupbox-h1 > .mx-groupbox-header {
+    font-size: $font-size-h1;
+}
+
+.groupbox-h2 > .mx-groupbox-header {
+    font-size: $font-size-h2;
+}
+
+.groupbox-h3 > .mx-groupbox-header {
+    font-size: $font-size-h3;
+}
+
+.groupbox-h4 > .mx-groupbox-header {
+    font-size: $font-size-h4;
+}
+
+.groupbox-h5 > .mx-groupbox-header {
+    font-size: $font-size-h5;
+}
+
+.groupbox-h6 > .mx-groupbox-header {
+    font-size: $font-size-h6;
+}
+
+// Callout Look and Feel
+.groupbox-callout {
+    > .mx-groupbox-header,
+    > .mx-groupbox-body {
+        border: 0;
+        background-color:  $brand-info-lighter;
+    }
+    .mx-groupbox-header + .mx-groupbox-body {
+        padding-top: 0;
+    }
+}
+
+.groupbox-info.groupbox-callout {
+    > .mx-groupbox-header,
+    > .mx-groupbox-body {
+        background-color:  $brand-info-lighter;
+    }
+    > .mx-groupbox-header {
+        color: $brand-info;
+    }
+}
+
+.groupbox-success.groupbox-callout {
+    > .mx-groupbox-header,
+    > .mx-groupbox-body {
+        background-color: $brand-success-lighter;
+    }
+    > .mx-groupbox-header {
+        color: $brand-success;
+    }
+}
+
+.groupbox-warning.groupbox-callout {
+    > .mx-groupbox-header,
+    > .mx-groupbox-body {
+        background-color:  $brand-warning-lighter;
+    }
+    > .mx-groupbox-header {
+        color: $brand-warning;
+    }
+}
+
+.groupbox-danger.groupbox-callout {
+    > .mx-groupbox-header,
+    > .mx-groupbox-body {
+        background-color: $brand-danger-lighter;
+    }
+    > .mx-groupbox-header {
+        color: $brand-danger;
+    }
+}

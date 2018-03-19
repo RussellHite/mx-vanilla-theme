@@ -1,0 +1,219 @@
+/* ==========================================================================
+   Navigation
+
+   Default Mendix Simple Menu Bar
+========================================================================== */
+.mx-menubar {
+    padding: 0;
+    background-color: $brand-inverse;
+    ul.mx-menubar-list {
+        display: flex;
+        width: 100%;
+        min-height: 50px;
+        li.mx-menubar-item {
+            margin: 0;
+             > a {
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                padding: $navigation-item-padding;
+                white-space: nowrap;
+                color: $text-light;
+                border-radius: 0;
+                font-size: $font-size-default;
+                font-weight: 400;
+                img {
+                    margin-right: 0.5em;
+                }
+                .glyphicon {
+                    top: -1px;
+                    margin-right: 0.5em;
+                    vertical-align: middle;
+                    font-size: $font-size-h4;
+                }
+            }
+            a:hover,
+            a:focus,
+            &:hover a,
+            &:focus a,
+            &.active a {
+                text-decoration: none;
+                color: $brand-default-dark;
+                background-color: $brand-inverse-light;
+            }
+            &.active a {
+                color: $text-light;
+                background-color: $brand-inverse-light;
+            }
+        }
+    }
+
+    /* remove focus */
+    &:focus {
+        outline: 0;
+    }
+}
+
+// Vertical variation specifics 
+.mx-menubar-vertical {
+    background-color: $brand-inverse;
+    ul.mx-menubar-list {
+        display: flex;
+        li.mx-menubar-item {
+            display: block;
+            a {
+                border-bottom: 1px solid $brand-inverse-light;
+            }
+        }
+    }
+}
+
+// Horizontal variation specifics 
+.mx-menubar-horizontal {
+    box-shadow: 2px 0 4px 0 rgba(0,0,0,0.14);
+    ul.mx-menubar-list {
+        li.mx-menubar-item {
+            width: auto;
+            a {
+                width: 100%;
+            }
+        }
+    }
+
+    /* Two menu items */
+    &.menubar-col-6 ul.mx-menubar-list li.mx-menubar-item {
+        width: 50%;
+    }
+
+    /* Three menu items */
+    &.menubar-col-4 ul.mx-menubar-list li.mx-menubar-item {
+        width: 33.33333333%;
+    }
+
+    /* Four menu items */
+    &.menubar-col-3 ul.mx-menubar-list li.mx-menubar-item {
+        width: 25%;
+    }
+
+    /* Five menu items */
+    &.menubar-col-2 ul.mx-menubar-list li.mx-menubar-item {
+        width: 20%;
+    }
+}
+
+//== Regions
+//## Behavior in the different regions
+//-------------------------------------------------------------------------------------------------------------------//
+// When used in topbar
+.region-topbar {
+    .mx-menubar {
+        background-color: $text-light;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    color:  $gray;
+                    font-size: $font-size-default;
+                    .glyphicon {
+                        font-size: 1.2em;
+                    }
+                }
+                a:hover,
+                a:focus,
+                &:hover a,
+                &:focus a,
+                &.active a {
+                    color:  $gray;
+                    background-color: $text-light;
+                }
+                &.active a {
+                    color:  $gray;
+                    background-color: $text-light;
+                }
+            }
+        }
+    }
+
+    // Vertical variation specifics 
+    .mx-menubar-vertical {
+        background-color: $text-light;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    height: $navigation-item-height;
+                    border-color:  $brand-info;
+                }
+            }
+        }
+    }
+}
+
+// When used in sidebar
+.region-sidebar {
+    .mx-menubar {
+        background-color: $brand-inverse;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    color: $text-light;
+                    font-size: $font-size-default;
+                    .glyphicon {
+                        font-size: 1.3em;
+                    }
+                }
+                a:hover,
+                a:focus,
+                &:hover a,
+                &:focus a,
+                &.active a {
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
+                }
+                &.active a {
+                    color: $text-light;
+                    background-color: $brand-inverse-light;
+                }
+            }
+        }
+    }
+
+    // Vertical variation specifics 
+    .mx-menubar-vertical {
+        background-color: $brand-inverse;
+        ul.mx-menubar-list {
+            li.mx-menubar-item {
+                a {
+                    border-color:  $brand-inverse-light;
+                }
+            }
+        }
+    }
+}
+
+//== Design Properties
+//## Helper classes to change the look and feel of the component
+//-------------------------------------------------------------------------------------------------------------------//
+// Center text and icons
+.bottom-nav-text-icons.mx-menubar {
+    ul.mx-menubar-list {
+        li.mx-menubar-item {
+            a {
+                flex-direction: column;
+                padding: 8px 8px 6px 8px;
+                line-height: normal;
+                font-size: 11px;
+                .glyphicon {
+                    display: block;
+                    margin: 0 0 5px 0;
+                    font-size: 18px;
+                }
+                img {
+                    display: block;
+                    height: 18px;
+                    margin: 0 0 5px 0;
+                }
+            }
+        }
+    }
+}

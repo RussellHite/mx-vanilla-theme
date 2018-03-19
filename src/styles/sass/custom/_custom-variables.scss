@@ -1,0 +1,60 @@
+//== Gray Shades
+//## Different gray shades to be used for our variables and components
+$gray-darker:                                       #222222;
+$gray-dark:                                         #333333;
+$gray:                                              #555555;
+$gray-light:                                        #888888;
+$gray-primary:                                      #D7D7D7;
+$gray-lighter:                                      #EEEEEE;
+
+//== Step 1: Brand Colors
+$brand-default:                                     #DDDDDD;
+$brand-primary:                                     #0595DB;
+$brand-inverse:                                     #252C36;
+$brand-info:                                        #48B0F7;
+$brand-success:                                     #76CA02;
+$brand-warning:                                     #F99B1D;
+$brand-danger:                                      #ED1C24;
+
+// Used for other variables
+$default-border-color:                              $gray-primary;
+
+//== Step 3: Typography
+$font-family-import:                                "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
+$font-family-base:                                  "Open Sans", sans-serif;
+$font-base-size:                                    14px;
+$font-base-color:                                   #555555;
+$brand-info:                                        $brand-primary;
+$font-size-h1:                                      31px;
+$font-size-h2:                                      26px;
+$font-size-h3:                                      24px;
+$font-size-h4:                                      18px;
+$brand-primary-darks:                                #17347B;
+
+//== Step 2: UI Customization
+
+// Topbar
+$text-light:                                         #FFFFFF;
+ $brand-info:                            $default-border-color;
+$topbar-border-color:                                $brand-info;
+$topbar-minheight:                              60px;
+ $gray:                                   $font-base-color;
+$gray:                                 $default-border-color;
+$brand-logo:                                        false;
+$brand-logo-height:                                 30px;
+$brand-logo-width:                                  30px;
+
+// Sidebar
+$brand-inverse:                                        $brand-inverse;
+$text-light:                                  #FFFFFF;
+$text-light:                            $text-light;
+
+// Backgrounds
+$text-light:                                          #FFFFFF;
+$brand-default-lighter:                                #F5F8FD;
+
+// == Old variables used in theme customizer to the new lib variables
+$font-size-default:                                 $font-base-size;
+$gray:                                $font-base-color;
+$gray-primary:                              $default-border-color;
+$brand-primary-dark:				                    $brand-primary-darks;
