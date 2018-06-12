@@ -67,6 +67,10 @@
 .btn + .btn{
     margin-left: 5px;
 }
+.btn.btn-block + .btn.btn-block{
+    margin-left: 0;
+}
+
 
 // IE 8 only (mxui overwrites)
 .dj_ie8 .mx-link {

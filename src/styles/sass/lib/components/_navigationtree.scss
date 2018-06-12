@@ -177,7 +177,7 @@
             & > li {
                 & > a {
                     color: $text-light;
-                    border-color:  $brand-inverse-light;
+                    border-color:  $brand-inverse;
                     background-color: $brand-inverse;
                     font-size: $font-size-default;
                     .caret {
@@ -219,11 +219,11 @@
                         &:hover,
                         &:focus,
                         &.active {
-                            color:  $brand-primary;
+                            color:  $brand-primary-light;
                             background-color: $brand-inverse;
                         }
                         &.active {
-                            color:  $brand-primary;
+                            color:  $brand-primary-light;
                             background-color: $brand-inverse;
                         }
                     }

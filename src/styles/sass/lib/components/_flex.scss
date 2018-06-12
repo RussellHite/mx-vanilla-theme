@@ -24,96 +24,124 @@
         margin-right: 0;
     }
     
-     .flex-xs-1, .flex-sm-1, .flex-md-1, .flex-lg-1{
+        .flex-md-1, .flex-lg-1{
             flex: 1 1 8.33333333%;
         }
-         .flex-xs-2, .flex-sm-2, .flex-md-2, .flex-lg-2{
+        .flex-md-2, .flex-lg-2{
             flex: 1 1  16.66666667%;
         }
-         .flex-xs-3, .flex-sm-3, .flex-md-3, .flex-lg-3{
+        .flex-md-3, .flex-lg-3{
             flex: 1 1  25%;
         }
-        .flex-xs-4, .flex-sm-4, .flex-md-4, .flex-lg-4{ 
+        .flex-md-4, .flex-lg-4{ 
             flex: 1 1  30%;
         }
-        .flex-xs-5, .flex-sm-5, .flex-md-5, .flex-lg-5{
+        .flex-md-5, .flex-lg-5{
             flex: 1 1 41.66666667%;
         }
-        .flex-xs-6, .flex-sm-6, .flex-md-6, .flex-lg-6{
+        .flex-md-6, .flex-lg-6{
             flex: 1 1  48%;
         }
-         .flex-xs-7, .flex-sm-7, .flex-md-7, .flex-lg-7{
+        .flex-md-7, .flex-lg-7{
             flex: 1 1  58.33333333%;
         }
-         .flex-xs-8, .flex-sm-8, .flex-md-8, .flex-lg-8{
+        .flex-md-8, .flex-lg-8{
             flex: 1 1  66.66666667%;
         }
-        .flex-xs-9, .flex-sm-9, .flex-md-9, .flex-lg-9{
+        .flex-md-9, .flex-lg-9{
            flex: 1 1 75%;
         }
-        .flex-xs-10, .flex-sm-10, .flex-md-10, .flex-lg-10{
+        .flex-md-10, .flex-lg-10{
             flex: 1 1 83.33333333%;
         }
-        .flex-xs-11, .flex-sm-11, .flex-md-11, .flex-lg-11{
+        .flex-md-11, .flex-lg-11{
             flex: 1 1  91.66666667%;
         }
-        .flex-xs-12, .flex-sm-12, .flex-md-1, .flex-lg-1{
+        .flex-md-1, .flex-lg-1{
             flex: 1 1 100%;
-            //margin-bottom: 10px;
         }
-   
-}
-       
- //styling specific for tablet
+    //styling specific for tablet
     @media only screen and (max-width: $screen-md)  {
-        .flex-1.flex-sm-3{
-            flex-basis:  33.3333%; 
-            margin-right: 0;
-            margin-bottom: 45px;
-           
+          .flex-sm-1{
+            flex: 1 1 8.33333333%;
         }
-        .flex-1.flex-sm-6{
-            flex-basis:  50%;
-            margin-right: 0;
-            margin-bottom: 45px;
-           
+         .flex-sm-2{
+            flex: 1 1  16.66666667%;
         }
-        .flex-1.flex-sm-9{
-            flex-basis:  75%;
-            margin-right: 0;
-            margin-bottom: 45px;
-           
+         .flex-sm-3{
+            flex: 1 1  25%;
         }
-        .flex-1.flex-sm-12{
-            flex-basis:  100%;
-            margin-bottom: 45px;
+       .flex-sm-4{ 
+            flex: 1 1  30%;
+        }
+         .flex-sm-5{
+            flex: 1 1 41.66666667%;
+        }
+        .flex-sm-6{
+            flex: 1 1  48%;
+        }
+        .flex-sm-7{
+            flex: 1 1  58.33333333%;
+        }
+        .flex-sm-8{
+            flex: 1 1  66.66666667%;
+        }
+        .flex-sm-9{
+           flex: 1 1 75%;
+        }
+        .flex-sm-10{
+            flex: 1 1 83.33333333%;
+        }
+        .flex-sm-11{
+            flex: 1 1  91.66666667%;
+        }
+        .flex-sm-12{
+            flex: 1 1 100%;
         }
     }
 //styling specific for mobile
     @media only screen and (max-width: $screen-sm)  {
-        [class*="flex-"]{
-            flex-basis: 100%;
-            margin-bottom: 25px;
+         .flex-xs-1{
+            flex: 1 1 8.33333333%;
         }
-        .flex-1.flex-xs-6{
-            flex-basis:  50%;
-            margin-bottom: 25px;
+         .flex-xs-2{
+            flex: 1 1  16.66666667%;
         }
-        .flex-1.flex-xs-12{
-            flex-basis: 100%;
-            margin-bottom: 25px;
+         .flex-xs-3{
+            flex: 1 1  25%;
         }
-        .flex-1.flex-sm-6{
-            flex-basis:  50%;
-            margin-right: 0;
-            margin-bottom: 25px;
-           
+        .flex-xs-4{ 
+            flex: 1 1  30%;
+        }
+        .flex-xs-5{
+            flex: 1 1 41.66666667%;
+        }
+        .flex-xs-6{
+            flex: 1 1  48%;
+        }
+         .flex-xs-7{
+            flex: 1 1  58.33333333%;
+        }
+         .flex-xs-8{
+            flex: 1 1  66.66666667%;
+        }
+        .flex-xs-9{
+           flex: 1 1 75%;
+        }
+        .flex-xs-10{
+            flex: 1 1 83.33333333%;
+        }
+        .flex-xs-11{
+            flex: 1 1  91.66666667%;
+        }
+        .flex-xs-12{
+            flex: 1 1 100%;
         }
     }
-.mx-listview.flex-container ul.mx-list li.mx-listview-item .mx-dataview-content {
-	display: flex;
-    justify-content: space-between;
 }
+       
+
+//styling for listview to look like datagrid
 .mx-dataview.flex-container .mx-dataview-content {
 	display: flex;
     justify-content: space-between;    

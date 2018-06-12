@@ -140,6 +140,24 @@
         }
     }
 }
+// Listview styled to work like datagrid
+.mx-listview.listview-datagrid{
+    ul.mx-list li.mx-listview-item{
+        padding:  $spacing-medium 0 ;
+      .mx-dataview-content {
+	display: flex;
+    justify-content: space-between;
+    
+    }  
+    } 
+}
+/*this should match the above porperties so columns align*/
+.listview-data-header{
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: 1px solid $gray-primary; 
+    padding:  $spacing-medium 0 0;
+}
 
 // Templategrid Row Sizes
 .listview-lg.mx-listview {
@@ -153,6 +171,9 @@
         padding: ( $spacing-medium / 2) ( $spacing-medium / 2) ( $spacing-medium / 2) ( $spacing-medium / 2);
     }
 }
+
+
+
 
 // Bootstrap columns
 .mx-listview[class*="lv-col"] {

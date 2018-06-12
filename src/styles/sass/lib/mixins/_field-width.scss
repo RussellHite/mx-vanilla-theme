@@ -1,0 +1,26 @@
+@mixin field-width($number, $side-padd) {
+    @for $i from 1 through $number{
+        .field-#{$i}.form-group .form-control, 
+        .field-#{$i}[class*="mx-name-textBox"] .form-control{ 
+            width: calc( #{$i} * 1em + #{$side-padd}); 
+        }
+        .field-#{$i} .mx-dateinput{
+            position: relative;
+            .mx-dateinput-input-wrapper{ 
+                width: calc( #{$i} * 1em + #{$side-padd}); 
+            }
+            .mx-dateinput-select-button{
+                float: none;
+                position: absolute;
+                left:calc( #{$i} * 1em + #{$side-padd}); 
+            }
+            
+        } 
+        
+    }
+    
+}  
+//field-width($number: # of characters the field will be , left and right padding on your input fields);
+@include field-width($number: 100, $side-padd:16px); 
+
+//use class field-10 for example in the modeler

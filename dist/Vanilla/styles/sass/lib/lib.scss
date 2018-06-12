@@ -1,4 +1,3 @@
-//
 // Atlas-UI-Framework v1.0.0 (https://atlas.mendix.com/)
 // Copyright (c) 2017 Mendix
 // Licensed under MIT (https://github.com/mendix/Atlas-UI-Framework/blob/master/LICENSE)
@@ -15,6 +14,7 @@
 @import "mixins/buttons";
 @import "mixins/groupbox";
 @import "mixins/flex-maker";
+@import "mixins/field-width";
 
 // Base
 @import "base/animation";
@@ -53,7 +53,6 @@
 @import "components/flex";/**/
 
 // Building Blocks
-/*
 @import "buildingblocks/alignment-block";
 @import "buildingblocks/breadcrumb";
 @import "buildingblocks/card";
@@ -64,7 +63,7 @@
 @import "buildingblocks/formblock";
 @import "buildingblocks/list";
 @import "buildingblocks/master-detail";
-@import "buildingblocks/userprofile";*/
+@import "buildingblocks/userprofile";/**/
 @import "buildingblocks/wizard";
 @import "buildingblocks/timeline";
 
@@ -84,3 +83,4 @@
 
 //project
 @import "project/responsive";
+@import "project/lsg";

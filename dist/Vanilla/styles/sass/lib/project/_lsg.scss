@@ -1,0 +1,290 @@
+.region-content {
+    padding: 0;
+    background-color: #fff;
+}
+h1,
+.h1 {
+    color: #000;
+}
+.region-content .central-content {
+    padding: 20px 0;
+}
+.region-topbar {
+    background-color:#fff; 
+}
+.region-topbar .mx-navbar ul.nav > .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a { 
+    color: #000;
+}
+/*---------------- Styling for top level horizontal naviagtion -----------------*/
+
+.styles-priamry-nav .listview-stylingless.mx-listview .mx-listview-item {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 20px 10px;
+    font-size: 18px;
+    line-height: 1em;
+}
+.styles-priamry-nav .listview-stylingless.mx-listview .mx-listview-item a {
+    color: #fff;
+}
+.styles-priamry-nav .listview-stylingless.mx-listview .mx-listview-item:hover {
+    display: inline-block;
+    padding: 15px 20px 10px;
+    font-size: 18px;
+    line-height: 1em;
+    background-color: transparent;
+    color: #ED4522;
+}
+.styles-priamry-nav .listview-stylingless.mx-listview .mx-listview-item a:hover,
+.styles-priamry-nav .listview-stylingless.mx-listview .mx-listview-item:hover a {
+    color: #ED4522;
+    text-decoration: none;
+}
+.background-dark{
+    background-color: #000;
+}
+/*---------------- Styling for side Navigation -----------------*/
+
+.styles-nav .mx-listview.mx-listview-selectable.listview-item .mx-listview-item {
+    padding: 5px 0;
+}
+.steps.mx-listview.mx-listview-selectable .mx-listview-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+.steps.mx-listview.mx-listview-selectable .mx-listview-item h4 {
+    margin: 5px 0 0;
+}
+.steps.mx-listview.mx-listview-selectable .mx-listview-item .wgt-CKEditorViewerForMendixNode p {
+    font-size: 14px;
+}
+/*---------------- Brand Content -----------------*/
+
+.templategrid-stylingless.three-blocks .mx-templategrid-item {
+    padding: 0 20px;
+}
+.templategrid-stylingless.three-blocks .mx-templategrid-item .mx-dataview .mx-dataview-content .mx-image.img-responsive {
+    margin: 0 auto;
+    margin-bottom: 30%;
+}
+.templategrid-stylingless.three-blocks .mx-templategrid-item:nth-child(2) .mx-dataview .mx-dataview-content .mx-image.img-responsive {
+    margin: 0 auto;
+    margin-bottom: 0
+}
+/*---------------- Category Listview -----------------*/
+
+.listview-stylingless.categories.mx-listview.mx-listview-selectable .mx-listview-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+/*---------------- Item Listview -----------------*/
+
+.listview-stylingless.item-list.mx-listview.mx-listview-selectable .mx-listview-item {
+    margin-bottom: 20px;
+    border-bottom: none;
+}
+/*---------------- Item Styling -----------------*/
+
+.code.form-group input.form-control,
+.code.form-group div p.form-control-static,
+.code label {
+    font-family: monospace;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 5px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.styles-nav {
+    margin-top: 40px;
+}
+.styles-priamry-nav {
+    margin-top: 0;
+    display: block;
+}
+.color-box {
+    width: 150px;
+    height: 60px;
+    margin-bottom: 6px;
+    margin-top: -20px;
+}
+.tips-list {
+    margin-top: 10px;
+}
+.wgt-CKEditorViewerForMendixNode p {
+    font-size: 14px;
+}
+/*---------------- View Details Styling -----------------*/
+
+.lsg-groupbox.mx-groupbox.mx-groupbox-collapsible > .mx-groupbox-header, 
+.lsg-groupbox.mx-groupbox > .mx-groupbox-header {
+    /*display: block;
+    background-color: transparent;
+    border: 1px solid #3498db;
+    color: #3498db;
+    font-weight: 400;
+    padding: 5px 10px;*/
+    margin-top: 20px;
+}
+/*removes margin from nested group*/
+.lsg-groupbox.mx-groupbox .mx-groupbox-header .mx-groupbox .mx-groupbox-header {
+    
+}
+.lsg-groupbox.mx-groupbox.mx-groupbox-collapsible .mx-groupbox-header .glyphicon,
+.lsg-groupbox.mx-groupbox .mx-groupbox-header .glyphicon  {
+    margin-left: 5px;
+}
+.lsg-groupbox.mx-groupbox.mx-groupbox-collapsible .mx-groupbox-header + .mx-groupbox-body
+.lsg-groupbox.mx-groupbox .mx-groupbox-header + .mx-groupbox-body{
+    border: 1px solid #3498db;
+    border-top: none;
+    padding-top: 0;
+   
+}
+.lsg-groupbox.mx-groupbox > .mx-groupbox-body{
+    background: #fff;
+    background-image: none;  
+    border: none;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    margin: 20px 0 0;
+}
+h5,
+.h5 {
+    margin: 10px 0 0;
+}
+/*---------------- Tip/Warning Styling -----------------*/
+
+.tip-wrapper {
+    position: relative;
+    padding-left: 20px;
+}
+.tip-wrapper .glyphicon  {
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+/*---------------- Utility Nav Styling -----------------g*/
+
+.mx-navbar.lsg-utility {
+    margin-top: 16px;
+}
+.mx-navbar.lsg-utility ul.nav > li.mx-navbar-item > a {
+    font-size: 14px;
+    padding: 5px 5px;
+    color: #000;
+}
+.mx-navbar.lsg-utility ul.nav > li.mx-navbar-item > a:hover,
+.mx-navbar.lsg-utility ul.nav > li.mx-navbar-item > a:focus,
+.mx-navbar.lsg-utility ul.nav > li.mx-navbar-item > a.active {
+    background-color: #ED4522;
+    color: #fff;
+}
+.lsg-order-btns {
+    position: absolute;
+    top: -8px;
+    right: 0;
+}
+.lsg-order-btns .btn-default {
+    border: none;
+}
+.auto-complete-search {
+    margin-top: 28px;
+}
+.icon-hover.fa{
+    display: block;
+}
+.icon-hover.fa:before {
+    display: none;
+}
+.icon-hover.fa:hover:before {
+    display: inline-block;
+    float: right;
+    z-index: +1;
+}
+.lsg-categories.mx-listview ul.mx-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.lsg-categories.mx-listview ul.mx-list li.mx-listview-item {
+    flex: 1 1 1%;
+    margin-right: 10px;
+    vertical-align: top;
+}
+.lsg-categories.mx-listview ul.mx-list li.mx-listview-item .lsg-subcategories.mx-listview ul.mx-list li.mx-listview-item {
+    border-bottom: 1px solid transparent;
+}
+.lsg-categories.mx-listview ul.mx-list li.mx-listview-item .lsg-subcategories.mx-listview ul.mx-list li.mx-listview-item:hover {
+    border-bottom: 1px solid #CDCDCD;
+}
+.lsg-categories.mx-listview ul.mx-list li.mx-listview-item div[cssselectorhelper="true"] {
+    border: 1px solid #CDCDCD;
+    padding: 5px;
+    padding-top: 0;
+}
+.lsg-categories.mx-listview ul.mx-list li.mx-listview-item div[cssselectorhelper="true"] .lsg-reorder-bar {
+    padding: 5px;
+}
+.btn-sort {
+    border: 1px solid transparent;
+    color: #CDCDCD;
+}
+.lsg-categories.mx-listview ul.mx-list li.mx-listview-item .mx-listview ul.mx-list {
+    display: block;
+}
+.lsg-reorder-bar {
+    border-bottom: 1px solid #CDCDCD;
+    text-align: center;
+}
+.inline-box > * {
+    display: inline-block;
+}
+.inline-box > .btn {
+    margin-left: 10px;
+    vertical-align: bottom;
+}
+/*---------*/
+.lsg-item-filter{
+    padding: 8px;
+}
+.lsg-item-filter .gridSearchMX .mx-grid-search-label, .lsg-item-filter .gridSearchMX .mx-grid-search-label+.mx-grid-search-input{
+    width: 100%;
+}
+.lsg-item-filter .mx-grid-search-label {
+    text-align: left;
+}
+.gridSearch.activeFilters{
+    margin-top: 7px;
+    margin-bottom: 0; 
+}
+.gridSearch.activeFilters > div{
+    font-size: 12px;
+    padding: 2px 9px 1px 9px;
+    margin-bottom: 3px;
+}
+.gridSearch.activeFilters > div:before{
+    padding-right: 0;
+    padding-left: 10px;
+    float: right;
+}
+.lsg-text-primary-light{
+    color: #447CEC ;
+}
+
+.lsg-inline-box > *{
+    display: inline-block;
+}
+.lsg-wizard-steps{
+    font-weight: 400;
+    margin-left: 10px;
+}
